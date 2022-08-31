@@ -77,6 +77,14 @@ foreach ($files as $filename)
 				switch ($k)
 				{
 					case 'doi':
+						// clean (still more weird things to do..)
+						$v = preg_replace('/([h|n]ttps?:\/\/)?(dx\.)?doi.org\//', '', $v);
+						$v = preg_replace('/DOI:\s*/i', '', $v);
+						$v = strtolower($v);
+						
+						$export->{$k} = $v;
+						break;
+						
 					case 'title':
 					case 'year':
 					case 'volume':
