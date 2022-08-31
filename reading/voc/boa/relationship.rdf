@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE rdf:RDF [
+        <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+        <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+        <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+        <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+        ]>
+
+<rdf:RDF
+        xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+        xmlns:owl="http://www.w3.org/2002/07/owl#"
+        xmlns:dcterms="http://purl.org/dc/terms/"
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+
+        xmlns:boa="http://biodiversity.org.au/voc/boa/BOA#"
+        xmlns:boa_name="http://biodiversity.org.au/voc/boa/Name#"
+        xmlns:boa_name_type="http://biodiversity.org.au/voc/boa/NameType#"
+        xmlns:boa_auth="http://biodiversity.org.au/voc/boa/Author#"
+        xmlns:boa_ref="http://biodiversity.org.au/voc/boa/Reference#"
+        xmlns:boa_rel="http://biodiversity.org.au/voc/boa/relationship#"
+        xmlns:boa_inst="http://biodiversity.org.au/voc/boa/Instance#"
+        xmlns:boa_instNote="http://biodiversity.org.au/voc/nsl/InstanceNote#"
+        xmlns:boa_er="http://biodiversity.org.au/voc/nsl/ExternalReference#"
+        xmlns:nsl="http://biodiversity.org.au/voc/nsl/NSL#"
+        >
+
+    <owl:Ontology rdf:about="http://biodiversity.org.au/voc/boa/relationship#ONTOLOGY">
+        <rdfs:isDefinedBy rdf:resource="http://biodiversity.org.au/voc/boa/relationship#ONTOLOGY"/>
+        <rdfs:label>relationship terms ontology</rdfs:label>
+        <rdf:seeAlso rdf:resource="http://biodiversity.org.au/voc/boa/relationship"/>
+        <dcterms:title>relationship terms - List of terms used in BOA</dcterms:title>
+        <dcterms:description rdf:parseType='Literal' rdf:dataType='&rdf;XMLLiteral'>
+            <div xmlns='http://www.w3.org/1999/xhtml' class='description relationship'>
+                <div class="header">relationship terms ontology</div>
+                <div class="content">List of terms appearing in BOA of type relationship</div>
+            </div>
+        </dcterms:description>
+    </owl:Ontology>
+
+    <owl:ObjectProperty rdf:about="http://biodiversity.org.au/voc/boa/relationship#default">
+        <rdfs:label>[default]</rdfs:label>
+        <dcterms:title>has [default]</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>[default]</b>)</dcterms:description>
+        <nsl:id>default</nsl:id>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship'/>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/boa/InstanceTypeTerm#default'/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://biodiversity.org.au/voc/boa/relationship#unknown">
+        <rdfs:label>[unknown]</rdfs:label>
+        <dcterms:title>has [unknown]</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>[unknown]</b>)</dcterms:description>
+        <nsl:id>unknown</nsl:id>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship'/>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/boa/InstanceTypeTerm#unknown'/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://biodiversity.org.au/voc/boa/relationship#n-a">
+        <rdfs:label>[n/a]</rdfs:label>
+        <dcterms:title>has [n/a]</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>[n/a]</b>)</dcterms:description>
+        <nsl:id>n-a</nsl:id>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship'/>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/boa/InstanceTypeTerm#n-a'/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://biodiversity.org.au/voc/boa/relationship#misapplied">
+        <rdfs:label>misapplied</rdfs:label>
+        <dcterms:title>has misapplied</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>misapplied</b>)</dcterms:description>
+        <nsl:id>misapplied</nsl:id>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship'/>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/boa/InstanceTypeTerm#misapplied'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-citing'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-misapplied'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-relationship'/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://biodiversity.org.au/voc/boa/relationship#pro-parte-misapplied">
+        <rdfs:label>pro parte misapplied</rdfs:label>
+        <dcterms:title>has pro parte misapplied</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>pro parte misapplied</b>)</dcterms:description>
+        <nsl:id>pro-parte-misapplied</nsl:id>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship'/>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/boa/InstanceTypeTerm#pro-parte-misapplied'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-citing'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-misapplied'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-pro-parte'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-relationship'/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://biodiversity.org.au/voc/boa/relationship#doubtful-misapplied">
+        <rdfs:label>doubtful misapplied</rdfs:label>
+        <dcterms:title>has doubtful misapplied</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>doubtful misapplied</b>)</dcterms:description>
+        <nsl:id>doubtful-misapplied</nsl:id>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship'/>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/boa/InstanceTypeTerm#doubtful-misapplied'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-citing'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-doubtful'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-misapplied'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-relationship'/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://biodiversity.org.au/voc/boa/relationship#excluded-name">
+        <rdfs:label>excluded name</rdfs:label>
+        <dcterms:title>has excluded name</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>excluded name</b>)</dcterms:description>
+        <nsl:id>excluded-name</nsl:id>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship'/>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/boa/InstanceTypeTerm#excluded-name'/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://biodiversity.org.au/voc/boa/relationship#synonym">
+        <rdfs:label>synonym</rdfs:label>
+        <dcterms:title>has synonym</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>synonym</b>)</dcterms:description>
+        <nsl:id>synonym</nsl:id>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship'/>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/boa/InstanceTypeTerm#synonym'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-citing'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-relationship'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-synonym'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-unsourced'/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://biodiversity.org.au/voc/boa/relationship#nomenclatural-synonym">
+        <rdfs:label>nomenclatural synonym</rdfs:label>
+        <dcterms:title>has nomenclatural synonym</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>nomenclatural synonym</b>)</dcterms:description>
+        <nsl:id>nomenclatural-synonym</nsl:id>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship'/>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/boa/InstanceTypeTerm#nomenclatural-synonym'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-citing'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-nomenclatural'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-relationship'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-synonym'/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://biodiversity.org.au/voc/boa/relationship#taxonomic-synonym">
+        <rdfs:label>taxonomic synonym</rdfs:label>
+        <dcterms:title>has taxonomic synonym</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>taxonomic synonym</b>)</dcterms:description>
+        <nsl:id>taxonomic-synonym</nsl:id>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship'/>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/boa/InstanceTypeTerm#taxonomic-synonym'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-citing'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-relationship'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-synonym'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-taxonomic'/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://biodiversity.org.au/voc/boa/relationship#pro-parte-synonym">
+        <rdfs:label>pro parte synonym</rdfs:label>
+        <dcterms:title>has pro parte synonym</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>pro parte synonym</b>)</dcterms:description>
+        <nsl:id>pro-parte-synonym</nsl:id>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship'/>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/boa/InstanceTypeTerm#pro-parte-synonym'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-citing'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-pro-parte'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-relationship'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-synonym'/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://biodiversity.org.au/voc/boa/relationship#pro-parte-taxonomic-synonym">
+        <rdfs:label>pro parte taxonomic synonym</rdfs:label>
+        <dcterms:title>has pro parte taxonomic synonym</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>pro parte taxonomic synonym</b>)</dcterms:description>
+        <nsl:id>pro-parte-taxonomic-synonym</nsl:id>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship'/>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/boa/InstanceTypeTerm#pro-parte-taxonomic-synonym'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-citing'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-pro-parte'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-relationship'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-synonym'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-taxonomic'/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://biodiversity.org.au/voc/boa/relationship#doubtful-synonym">
+        <rdfs:label>doubtful synonym</rdfs:label>
+        <dcterms:title>has doubtful synonym</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>doubtful synonym</b>)</dcterms:description>
+        <nsl:id>doubtful-synonym</nsl:id>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship'/>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/boa/InstanceTypeTerm#doubtful-synonym'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-citing'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-doubtful'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-relationship'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-synonym'/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://biodiversity.org.au/voc/boa/relationship#invalid-publication">
+        <rdfs:label>invalid publication</rdfs:label>
+        <dcterms:title>has invalid publication</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>invalid publication</b>)</dcterms:description>
+        <nsl:id>invalid-publication</nsl:id>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship'/>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/boa/InstanceTypeTerm#invalid-publication'/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://biodiversity.org.au/voc/boa/relationship#sens-lat">
+        <rdfs:label>sens. lat.</rdfs:label>
+        <dcterms:title>has sens. lat.</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>sens. lat.</b>)</dcterms:description>
+        <nsl:id>sens-lat</nsl:id>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship'/>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/boa/InstanceTypeTerm#sens-lat'/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://biodiversity.org.au/voc/boa/relationship#doubtful-taxonomic-synonym">
+        <rdfs:label>doubtful taxonomic synonym</rdfs:label>
+        <dcterms:title>has doubtful taxonomic synonym</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>doubtful taxonomic synonym</b>)</dcterms:description>
+        <nsl:id>doubtful-taxonomic-synonym</nsl:id>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship'/>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/boa/InstanceTypeTerm#doubtful-taxonomic-synonym'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-citing'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-doubtful'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-relationship'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-synonym'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-taxonomic'/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://biodiversity.org.au/voc/boa/relationship#doubtful-nomenclatural-synonym">
+        <rdfs:label>doubtful nomenclatural synonym</rdfs:label>
+        <dcterms:title>has doubtful nomenclatural synonym</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>doubtful nomenclatural synonym</b>)</dcterms:description>
+        <nsl:id>doubtful-nomenclatural-synonym</nsl:id>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship'/>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/boa/InstanceTypeTerm#doubtful-nomenclatural-synonym'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-doubtful'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-nomenclatural'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-synonym'/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://biodiversity.org.au/voc/boa/relationship#pro-parte-nomenclatural-synonym">
+        <rdfs:label>pro parte nomenclatural synonym</rdfs:label>
+        <dcterms:title>has pro parte nomenclatural synonym</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>pro parte nomenclatural synonym</b>)</dcterms:description>
+        <nsl:id>pro-parte-nomenclatural-synonym</nsl:id>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship'/>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/boa/InstanceTypeTerm#pro-parte-nomenclatural-synonym'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-nomenclatural'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-pro-parte'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-synonym'/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://biodiversity.org.au/voc/boa/relationship#basionym">
+        <rdfs:label>basionym</rdfs:label>
+        <dcterms:title>has basionym</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>basionym</b>)</dcterms:description>
+        <nsl:id>basionym</nsl:id>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship'/>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/boa/InstanceTypeTerm#basionym'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-citing'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-nomenclatural'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-relationship'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-synonym'/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://biodiversity.org.au/voc/boa/relationship#doubtful-pro-parte-synonym">
+        <rdfs:label>doubtful pro parte synonym</rdfs:label>
+        <dcterms:title>has doubtful pro parte synonym</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>doubtful pro parte synonym</b>)</dcterms:description>
+        <nsl:id>doubtful-pro-parte-synonym</nsl:id>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship'/>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/boa/InstanceTypeTerm#doubtful-pro-parte-synonym'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-citing'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-doubtful'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-pro-parte'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-relationship'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-synonym'/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://biodiversity.org.au/voc/boa/relationship#doubtful-pro-parte-taxonomic-synonym">
+        <rdfs:label>doubtful pro parte taxonomic synonym</rdfs:label>
+        <dcterms:title>has doubtful pro parte taxonomic synonym</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>doubtful pro parte taxonomic synonym</b>)</dcterms:description>
+        <nsl:id>doubtful-pro-parte-taxonomic-synonym</nsl:id>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship'/>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/boa/InstanceTypeTerm#doubtful-pro-parte-taxonomic-synonym'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-citing'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-doubtful'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-pro-parte'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-relationship'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-synonym'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-taxonomic'/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://biodiversity.org.au/voc/boa/relationship#unsourced-misapplied">
+        <rdfs:label>unsourced misapplied</rdfs:label>
+        <dcterms:title>has unsourced misapplied</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>unsourced misapplied</b>)</dcterms:description>
+        <nsl:id>unsourced-misapplied</nsl:id>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship'/>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/boa/InstanceTypeTerm#unsourced-misapplied'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-citing'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-misapplied'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-relationship'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-unsourced'/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://biodiversity.org.au/voc/boa/relationship#unsourced-pro-parte-misapplied">
+        <rdfs:label>unsourced pro parte misapplied</rdfs:label>
+        <dcterms:title>has unsourced pro parte misapplied</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>unsourced pro parte misapplied</b>)</dcterms:description>
+        <nsl:id>unsourced-pro-parte-misapplied</nsl:id>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship'/>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/boa/InstanceTypeTerm#unsourced-pro-parte-misapplied'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-citing'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-misapplied'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-pro-parte'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-relationship'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-unsourced'/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://biodiversity.org.au/voc/boa/relationship#doubtful-pro-parte-misapplied">
+        <rdfs:label>doubtful pro parte misapplied</rdfs:label>
+        <dcterms:title>has doubtful pro parte misapplied</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>doubtful pro parte misapplied</b>)</dcterms:description>
+        <nsl:id>doubtful-pro-parte-misapplied</nsl:id>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship'/>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/boa/InstanceTypeTerm#doubtful-pro-parte-misapplied'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-citing'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-doubtful'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-misapplied'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-pro-parte'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-relationship'/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://biodiversity.org.au/voc/boa/relationship#unsourced-doubtful-misapplied">
+        <rdfs:label>unsourced doubtful misapplied</rdfs:label>
+        <dcterms:title>has unsourced doubtful misapplied</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>unsourced doubtful misapplied</b>)</dcterms:description>
+        <nsl:id>unsourced-doubtful-misapplied</nsl:id>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship'/>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/boa/InstanceTypeTerm#unsourced-doubtful-misapplied'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-citing'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-doubtful'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-misapplied'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-relationship'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-unsourced'/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://biodiversity.org.au/voc/boa/relationship#unsourced-doubtful-pro-parte-misapplied">
+        <rdfs:label>unsourced doubtful pro parte misapplied</rdfs:label>
+        <dcterms:title>has unsourced doubtful pro parte misapplied</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>unsourced doubtful pro parte misapplied</b>)</dcterms:description>
+        <nsl:id>unsourced-doubtful-pro-parte-misapplied</nsl:id>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship'/>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/boa/InstanceTypeTerm#unsourced-doubtful-pro-parte-misapplied'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-citing'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-doubtful'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-misapplied'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-pro-parte'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-relationship'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-unsourced'/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://biodiversity.org.au/voc/boa/relationship#alternative-name">
+        <rdfs:label>alternative name</rdfs:label>
+        <dcterms:title>has alternative name</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>alternative name</b>)</dcterms:description>
+        <nsl:id>alternative-name</nsl:id>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship'/>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/boa/InstanceTypeTerm#alternative-name'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-citing'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-nomenclatural'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-relationship'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-synonym'/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://biodiversity.org.au/voc/boa/relationship#doubtful-invalid-publication">
+        <rdfs:label>doubtful invalid publication</rdfs:label>
+        <dcterms:title>has doubtful invalid publication</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>doubtful invalid publication</b>)</dcterms:description>
+        <nsl:id>doubtful-invalid-publication</nsl:id>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship'/>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/boa/InstanceTypeTerm#doubtful-invalid-publication'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-doubtful'/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://biodiversity.org.au/voc/boa/relationship#isonym">
+        <rdfs:label>isonym</rdfs:label>
+        <dcterms:title>has isonym</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>isonym</b>)</dcterms:description>
+        <nsl:id>isonym</nsl:id>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship'/>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/boa/InstanceTypeTerm#isonym'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-citing'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-nomenclatural'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-relationship'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-synonym'/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://biodiversity.org.au/voc/boa/relationship#orthographic-variant">
+        <rdfs:label>orthographic variant</rdfs:label>
+        <dcterms:title>has orthographic variant</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>orthographic variant</b>)</dcterms:description>
+        <nsl:id>orthographic-variant</nsl:id>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship'/>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/boa/InstanceTypeTerm#orthographic-variant'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-citing'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-nomenclatural'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-relationship'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-synonym'/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://biodiversity.org.au/voc/boa/relationship#replaced-synonym">
+        <rdfs:label>replaced synonym</rdfs:label>
+        <dcterms:title>has replaced synonym</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>replaced synonym</b>)</dcterms:description>
+        <nsl:id>replaced-synonym</nsl:id>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship'/>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/boa/InstanceTypeTerm#replaced-synonym'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-citing'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-nomenclatural'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-relationship'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-synonym'/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://biodiversity.org.au/voc/boa/relationship#pro-parte-replaced-synonym">
+        <rdfs:label>pro parte replaced synonym</rdfs:label>
+        <dcterms:title>has pro parte replaced synonym</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>pro parte replaced synonym</b>)</dcterms:description>
+        <nsl:id>pro-parte-replaced-synonym</nsl:id>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship'/>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/boa/InstanceTypeTerm#pro-parte-replaced-synonym'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-nomenclatural'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-pro-parte'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-synonym'/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://biodiversity.org.au/voc/boa/relationship#trade-name">
+        <rdfs:label>trade name</rdfs:label>
+        <dcterms:title>has trade name</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>trade name</b>)</dcterms:description>
+        <nsl:id>trade-name</nsl:id>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship'/>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/boa/InstanceTypeTerm#trade-name'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-citing'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-relationship'/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://biodiversity.org.au/voc/boa/relationship#common-name">
+        <rdfs:label>common name</rdfs:label>
+        <dcterms:title>has common name</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>common name</b>)</dcterms:description>
+        <nsl:id>common-name</nsl:id>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship'/>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/boa/InstanceTypeTerm#common-name'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-citing'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-relationship'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-unsourced'/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="http://biodiversity.org.au/voc/boa/relationship#vernacular-name">
+        <rdfs:label>vernacular name</rdfs:label>
+        <dcterms:title>has vernacular name</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>vernacular name</b>)</dcterms:description>
+        <nsl:id>vernacular-name</nsl:id>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship'/>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/boa/InstanceTypeTerm#vernacular-name'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-citing'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-relationship'/>
+        <rdfs:subPropertyOf rdf:resource='http://biodiversity.org.au/voc/boa/Instance#relationship-unsourced'/>
+    </owl:ObjectProperty>
+
+</rdf:RDF>

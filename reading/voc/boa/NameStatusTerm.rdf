@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE rdf:RDF [
+        <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+        <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+        <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+        <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+        ]>
+
+<rdf:RDF
+        xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+        xmlns:owl="http://www.w3.org/2002/07/owl#"
+        xmlns:dcterms="http://purl.org/dc/terms/"
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+
+        xmlns:boa="http://biodiversity.org.au/voc/boa/BOA#"
+        xmlns:boa_name="http://biodiversity.org.au/voc/boa/Name#"
+        xmlns:boa_name_type="http://biodiversity.org.au/voc/boa/NameType#"
+        xmlns:boa_auth="http://biodiversity.org.au/voc/boa/Author#"
+        xmlns:boa_ref="http://biodiversity.org.au/voc/boa/Reference#"
+        xmlns:boa_rel="http://biodiversity.org.au/voc/boa/relationship#"
+        xmlns:boa_inst="http://biodiversity.org.au/voc/boa/Instance#"
+        xmlns:boa_instNote="http://biodiversity.org.au/voc/nsl/InstanceNote#"
+        xmlns:boa_er="http://biodiversity.org.au/voc/nsl/ExternalReference#"
+        xmlns:nsl="http://biodiversity.org.au/voc/nsl/NSL#"
+        >
+
+    <owl:Ontology rdf:about="http://biodiversity.org.au/voc/boa/NameStatusTerm#ONTOLOGY">
+        <rdfs:isDefinedBy rdf:resource="http://biodiversity.org.au/voc/boa/NameStatusTerm#ONTOLOGY"/>
+        <rdfs:label>NameStatus terms ontology</rdfs:label>
+        <rdf:seeAlso rdf:resource="http://biodiversity.org.au/voc/boa/NameStatus"/>
+        <dcterms:title>NameStatus terms - List of terms used in BOA</dcterms:title>
+        <dcterms:description rdf:parseType='Literal' rdf:dataType='&rdf;XMLLiteral'>
+            <div xmlns='http://www.w3.org/1999/xhtml' class='description NameStatus'>
+                <div class="header">NameStatus terms ontology</div>
+                <div class="content">List of terms appearing in BOA of type NameStatus</div>
+            </div>
+        </dcterms:description>
+    </owl:Ontology>
+
+    <boa:NameStatus rdf:about="http://biodiversity.org.au/voc/boa/NameStatusTerm#default">
+        <rdfs:label>[default]</rdfs:label>
+        <dcterms:title>NameStatus [default]</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>[default]</b>)</dcterms:description>
+        <nsl:id>default</nsl:id>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#n-a'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Status-display'/>
+
+    </boa:NameStatus>
+
+    <boa:NameStatus rdf:about="http://biodiversity.org.au/voc/boa/NameStatusTerm#unknown">
+        <rdfs:label>[unknown]</rdfs:label>
+        <dcterms:title>NameStatus [unknown]</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>[unknown]</b>)</dcterms:description>
+        <nsl:id>unknown</nsl:id>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#n-a'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Status-display'/>
+
+    </boa:NameStatus>
+
+    <boa:NameStatus rdf:about="http://biodiversity.org.au/voc/boa/NameStatusTerm#n-a">
+        <rdfs:label>[n/a]</rdfs:label>
+        <dcterms:title>NameStatus [n/a]</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>[n/a]</b>)</dcterms:description>
+        <nsl:id>n-a</nsl:id>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#n-a'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Status-display'/>
+
+    </boa:NameStatus>
+
+    <boa:NameStatus rdf:about="http://biodiversity.org.au/voc/boa/NameStatusTerm#nom-cons-orth-cons">
+        <rdfs:label>nom. cons., orth. cons.</rdfs:label>
+        <dcterms:title>NameStatus nom. cons., orth. cons.</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>nom. cons., orth. cons.</b>)</dcterms:description>
+        <nsl:id>nom-cons-orth-cons</nsl:id>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Status-display'/>
+
+    </boa:NameStatus>
+
+    <boa:NameStatus rdf:about="http://biodiversity.org.au/voc/boa/NameStatusTerm#legitimate">
+        <rdfs:label>legitimate</rdfs:label>
+        <dcterms:title>NameStatus legitimate</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>legitimate</b>)</dcterms:description>
+        <nsl:id>legitimate</nsl:id>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Status-display'/>
+
+    </boa:NameStatus>
+
+    <boa:NameStatus rdf:about="http://biodiversity.org.au/voc/boa/NameStatusTerm#nom-inval">
+        <rdfs:label>nom. inval.</rdfs:label>
+        <dcterms:title>NameStatus nom. inval.</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>nom. inval.</b>)</dcterms:description>
+        <nsl:id>nom-inval</nsl:id>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Status-display'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Status-nom-inval'/>
+
+    </boa:NameStatus>
+
+    <boa:NameStatus rdf:about="http://biodiversity.org.au/voc/boa/NameStatusTerm#nom-inval-pro-syn">
+        <rdfs:label>nom. inval., pro syn.</rdfs:label>
+        <dcterms:title>NameStatus nom. inval., pro syn.</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>nom. inval., pro syn.</b>)</dcterms:description>
+        <nsl:id>nom-inval-pro-syn</nsl:id>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Status-display'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Status-nom-inval'/>
+
+    </boa:NameStatus>
+
+    <boa:NameStatus rdf:about="http://biodiversity.org.au/voc/boa/NameStatusTerm#nom-inval-nom-nud">
+        <rdfs:label>nom. inval., nom. nud.</rdfs:label>
+        <dcterms:title>NameStatus nom. inval., nom. nud.</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>nom. inval., nom. nud.</b>)</dcterms:description>
+        <nsl:id>nom-inval-nom-nud</nsl:id>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Status-display'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Status-nom-inval'/>
+
+    </boa:NameStatus>
+
+    <boa:NameStatus rdf:about="http://biodiversity.org.au/voc/boa/NameStatusTerm#nom-inval-nom-subnud">
+        <rdfs:label>nom. inval., nom. subnud.</rdfs:label>
+        <dcterms:title>NameStatus nom. inval., nom. subnud.</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>nom. inval., nom. subnud.</b>)</dcterms:description>
+        <nsl:id>nom-inval-nom-subnud</nsl:id>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Status-display'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Status-nom-inval'/>
+
+    </boa:NameStatus>
+
+    <boa:NameStatus rdf:about="http://biodiversity.org.au/voc/boa/NameStatusTerm#nom-inval-nom-ambig">
+        <rdfs:label>nom. inval., nom. ambig.</rdfs:label>
+        <dcterms:title>NameStatus nom. inval., nom. ambig.</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>nom. inval., nom. ambig.</b>)</dcterms:description>
+        <nsl:id>nom-inval-nom-ambig</nsl:id>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Status-display'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Status-nom-inval'/>
+
+    </boa:NameStatus>
+
+    <boa:NameStatus rdf:about="http://biodiversity.org.au/voc/boa/NameStatusTerm#nom-inval-nom-confus">
+        <rdfs:label>nom. inval., nom. confus.</rdfs:label>
+        <dcterms:title>NameStatus nom. inval., nom. confus.</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>nom. inval., nom. confus.</b>)</dcterms:description>
+        <nsl:id>nom-inval-nom-confus</nsl:id>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Status-display'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Status-nom-inval'/>
+
+    </boa:NameStatus>
+
+    <boa:NameStatus rdf:about="http://biodiversity.org.au/voc/boa/NameStatusTerm#nom-inval-nom-prov">
+        <rdfs:label>nom. inval., nom. prov.</rdfs:label>
+        <dcterms:title>NameStatus nom. inval., nom. prov.</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>nom. inval., nom. prov.</b>)</dcterms:description>
+        <nsl:id>nom-inval-nom-prov</nsl:id>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Status-display'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Status-nom-inval'/>
+
+    </boa:NameStatus>
+
+    <boa:NameStatus rdf:about="http://biodiversity.org.au/voc/boa/NameStatusTerm#nom-inval-nom-alt">
+        <rdfs:label>nom. inval., nom. alt.</rdfs:label>
+        <dcterms:title>NameStatus nom. inval., nom. alt.</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>nom. inval., nom. alt.</b>)</dcterms:description>
+        <nsl:id>nom-inval-nom-alt</nsl:id>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Status-display'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Status-nom-inval'/>
+
+    </boa:NameStatus>
+
+    <boa:NameStatus rdf:about="http://biodiversity.org.au/voc/boa/NameStatusTerm#nom-inval-opera-utique-oppressa">
+        <rdfs:label>nom. inval., opera utique oppressa</rdfs:label>
+        <dcterms:title>NameStatus nom. inval., opera utique oppressa</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>nom. inval., opera utique oppressa</b>)</dcterms:description>
+        <nsl:id>nom-inval-opera-utique-oppressa</nsl:id>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Status-display'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Status-nom-inval'/>
+
+    </boa:NameStatus>
+
+    <boa:NameStatus rdf:about="http://biodiversity.org.au/voc/boa/NameStatusTerm#nom-inval-tautonym">
+        <rdfs:label>nom. inval., tautonym</rdfs:label>
+        <dcterms:title>NameStatus nom. inval., tautonym</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>nom. inval., tautonym</b>)</dcterms:description>
+        <nsl:id>nom-inval-tautonym</nsl:id>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Status-display'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Status-nom-inval'/>
+
+    </boa:NameStatus>
+
+    <boa:NameStatus rdf:about="http://biodiversity.org.au/voc/boa/NameStatusTerm#nom-illeg">
+        <rdfs:label>nom. illeg.</rdfs:label>
+        <dcterms:title>NameStatus nom. illeg.</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>nom. illeg.</b>)</dcterms:description>
+        <nsl:id>nom-illeg</nsl:id>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Status-display'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Status-nom-illeg'/>
+
+    </boa:NameStatus>
+
+    <boa:NameStatus rdf:about="http://biodiversity.org.au/voc/boa/NameStatusTerm#nom-illeg-nom-superfl">
+        <rdfs:label>nom. illeg., nom. superfl.</rdfs:label>
+        <dcterms:title>NameStatus nom. illeg., nom. superfl.</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>nom. illeg., nom. superfl.</b>)</dcterms:description>
+        <nsl:id>nom-illeg-nom-superfl</nsl:id>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Status-display'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Status-nom-illeg'/>
+
+    </boa:NameStatus>
+
+    <boa:NameStatus rdf:about="http://biodiversity.org.au/voc/boa/NameStatusTerm#nom-illeg-nom-rej">
+        <rdfs:label>nom. illeg., nom. rej.</rdfs:label>
+        <dcterms:title>NameStatus nom. illeg., nom. rej.</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>nom. illeg., nom. rej.</b>)</dcterms:description>
+        <nsl:id>nom-illeg-nom-rej</nsl:id>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Status-display'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Status-nom-illeg'/>
+
+    </boa:NameStatus>
+
+    <boa:NameStatus rdf:about="http://biodiversity.org.au/voc/boa/NameStatusTerm#isonym">
+        <rdfs:label>isonym</rdfs:label>
+        <dcterms:title>NameStatus isonym</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>isonym</b>)</dcterms:description>
+        <nsl:id>isonym</nsl:id>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Status-display'/>
+
+    </boa:NameStatus>
+
+    <boa:NameStatus rdf:about="http://biodiversity.org.au/voc/boa/NameStatusTerm#nom-superfl">
+        <rdfs:label>nom. superfl.</rdfs:label>
+        <dcterms:title>NameStatus nom. superfl.</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>nom. superfl.</b>)</dcterms:description>
+        <nsl:id>nom-superfl</nsl:id>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Status-display'/>
+
+    </boa:NameStatus>
+
+    <boa:NameStatus rdf:about="http://biodiversity.org.au/voc/boa/NameStatusTerm#nom-rej">
+        <rdfs:label>nom. rej.</rdfs:label>
+        <dcterms:title>NameStatus nom. rej.</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>nom. rej.</b>)</dcterms:description>
+        <nsl:id>nom-rej</nsl:id>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Status-display'/>
+
+    </boa:NameStatus>
+
+    <boa:NameStatus rdf:about="http://biodiversity.org.au/voc/boa/NameStatusTerm#nom-alt">
+        <rdfs:label>nom. alt.</rdfs:label>
+        <dcterms:title>NameStatus nom. alt.</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>nom. alt.</b>)</dcterms:description>
+        <nsl:id>nom-alt</nsl:id>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Status-display'/>
+
+    </boa:NameStatus>
+
+    <boa:NameStatus rdf:about="http://biodiversity.org.au/voc/boa/NameStatusTerm#nom-cult">
+        <rdfs:label>nom. cult.</rdfs:label>
+        <dcterms:title>NameStatus nom. cult.</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>nom. cult.</b>)</dcterms:description>
+        <nsl:id>nom-cult</nsl:id>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Status-display'/>
+
+    </boa:NameStatus>
+
+    <boa:NameStatus rdf:about="http://biodiversity.org.au/voc/boa/NameStatusTerm#nom-cons">
+        <rdfs:label>nom. cons.</rdfs:label>
+        <dcterms:title>NameStatus nom. cons.</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>nom. cons.</b>)</dcterms:description>
+        <nsl:id>nom-cons</nsl:id>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Status-display'/>
+
+    </boa:NameStatus>
+
+    <boa:NameStatus rdf:about="http://biodiversity.org.au/voc/boa/NameStatusTerm#nom-cons-nom-alt">
+        <rdfs:label>nom. cons., nom. alt.</rdfs:label>
+        <dcterms:title>NameStatus nom. cons., nom. alt.</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>nom. cons., nom. alt.</b>)</dcterms:description>
+        <nsl:id>nom-cons-nom-alt</nsl:id>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Status-display'/>
+
+    </boa:NameStatus>
+
+    <boa:NameStatus rdf:about="http://biodiversity.org.au/voc/boa/NameStatusTerm#nom-cult-nom-alt">
+        <rdfs:label>nom. cult., nom. alt.</rdfs:label>
+        <dcterms:title>NameStatus nom. cult., nom. alt.</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>nom. cult., nom. alt.</b>)</dcterms:description>
+        <nsl:id>nom-cult-nom-alt</nsl:id>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Status-display'/>
+
+    </boa:NameStatus>
+
+    <boa:NameStatus rdf:about="http://biodiversity.org.au/voc/boa/NameStatusTerm#nom-et-typ-cons">
+        <rdfs:label>nom. et typ. cons.</rdfs:label>
+        <dcterms:title>NameStatus nom. et typ. cons.</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>nom. et typ. cons.</b>)</dcterms:description>
+        <nsl:id>nom-et-typ-cons</nsl:id>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Status-display'/>
+
+    </boa:NameStatus>
+
+    <boa:NameStatus rdf:about="http://biodiversity.org.au/voc/boa/NameStatusTerm#nom-et-orth-cons">
+        <rdfs:label>nom. et orth. cons.</rdfs:label>
+        <dcterms:title>NameStatus nom. et orth. cons.</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>nom. et orth. cons.</b>)</dcterms:description>
+        <nsl:id>nom-et-orth-cons</nsl:id>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Status-display'/>
+
+    </boa:NameStatus>
+
+    <boa:NameStatus rdf:about="http://biodiversity.org.au/voc/boa/NameStatusTerm#nomina-utique-rejicienda">
+        <rdfs:label>nomina utique rejicienda</rdfs:label>
+        <dcterms:title>NameStatus nomina utique rejicienda</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>nomina utique rejicienda</b>)</dcterms:description>
+        <nsl:id>nomina-utique-rejicienda</nsl:id>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Status-display'/>
+
+    </boa:NameStatus>
+
+    <boa:NameStatus rdf:about="http://biodiversity.org.au/voc/boa/NameStatusTerm#typ-cons">
+        <rdfs:label>typ. cons.</rdfs:label>
+        <dcterms:title>NameStatus typ. cons.</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>typ. cons.</b>)</dcterms:description>
+        <nsl:id>typ-cons</nsl:id>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Status-display'/>
+
+    </boa:NameStatus>
+
+    <boa:NameStatus rdf:about="http://biodiversity.org.au/voc/boa/NameStatusTerm#orth-var">
+        <rdfs:label>orth. var.</rdfs:label>
+        <dcterms:title>NameStatus orth. var.</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>orth. var.</b>)</dcterms:description>
+        <nsl:id>orth-var</nsl:id>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Status-display'/>
+
+    </boa:NameStatus>
+
+    <boa:NameStatus rdf:about="http://biodiversity.org.au/voc/boa/NameStatusTerm#orth-cons">
+        <rdfs:label>orth. cons.</rdfs:label>
+        <dcterms:title>NameStatus orth. cons.</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>orth. cons.</b>)</dcterms:description>
+        <nsl:id>orth-cons</nsl:id>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Status-display'/>
+
+    </boa:NameStatus>
+
+    <boa:NameStatus rdf:about="http://biodiversity.org.au/voc/boa/NameStatusTerm#manuscript">
+        <rdfs:label>manuscript</rdfs:label>
+        <dcterms:title>NameStatus manuscript</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>manuscript</b>)</dcterms:description>
+        <nsl:id>manuscript</nsl:id>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Status-display'/>
+
+    </boa:NameStatus>
+
+    <boa:NameStatus rdf:about="http://biodiversity.org.au/voc/boa/NameStatusTerm#nom-alt-nom-illeg">
+        <rdfs:label>nom. alt., nom. illeg</rdfs:label>
+        <dcterms:title>NameStatus nom. alt., nom. illeg</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>nom. alt., nom. illeg.</b>)</dcterms:description>
+        <nsl:id>nom-alt-nom-illeg</nsl:id>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Status-display'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Status-nom-illeg'/>
+
+    </boa:NameStatus>
+
+    <boa:NameStatus rdf:about="http://biodiversity.org.au/voc/boa/NameStatusTerm#nom-inval-nom-dub">
+        <rdfs:label>nom. inval., nom. dub.</rdfs:label>
+        <dcterms:title>NameStatus nom. inval., nom. dub.</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>nom. inval., nom. dub.</b>)</dcterms:description>
+        <nsl:id>nom-inval-nom-dub</nsl:id>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Status-display'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Status-nom-inval'/>
+
+    </boa:NameStatus>
+
+</rdf:RDF>

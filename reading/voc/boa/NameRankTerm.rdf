@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE rdf:RDF [
+        <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+        <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+        <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+        <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+        ]>
+
+<rdf:RDF
+        xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+        xmlns:owl="http://www.w3.org/2002/07/owl#"
+        xmlns:dcterms="http://purl.org/dc/terms/"
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+
+        xmlns:boa="http://biodiversity.org.au/voc/boa/BOA#"
+        xmlns:boa_name="http://biodiversity.org.au/voc/boa/Name#"
+        xmlns:boa_name_type="http://biodiversity.org.au/voc/boa/NameType#"
+        xmlns:boa_auth="http://biodiversity.org.au/voc/boa/Author#"
+        xmlns:boa_ref="http://biodiversity.org.au/voc/boa/Reference#"
+        xmlns:boa_rel="http://biodiversity.org.au/voc/boa/relationship#"
+        xmlns:boa_inst="http://biodiversity.org.au/voc/boa/Instance#"
+        xmlns:boa_instNote="http://biodiversity.org.au/voc/nsl/InstanceNote#"
+        xmlns:boa_er="http://biodiversity.org.au/voc/nsl/ExternalReference#"
+        xmlns:nsl="http://biodiversity.org.au/voc/nsl/NSL#"
+        >
+
+    <owl:Ontology rdf:about="http://biodiversity.org.au/voc/boa/NameRankTerm#ONTOLOGY">
+        <rdfs:isDefinedBy rdf:resource="http://biodiversity.org.au/voc/boa/NameRankTerm#ONTOLOGY"/>
+        <rdfs:label>NameRank terms ontology</rdfs:label>
+        <rdf:seeAlso rdf:resource="http://biodiversity.org.au/voc/boa/NameRank"/>
+        <dcterms:title>NameRank terms - List of terms used in BOA</dcterms:title>
+        <dcterms:description rdf:parseType='Literal' rdf:dataType='&rdf;XMLLiteral'>
+            <div xmlns='http://www.w3.org/1999/xhtml' class='description NameRank'>
+                <div class="header">NameRank terms ontology</div>
+                <div class="content">List of terms appearing in BOA of type NameRank</div>
+            </div>
+        </dcterms:description>
+    </owl:Ontology>
+
+    <boa:NameRank rdf:about="http://biodiversity.org.au/voc/boa/NameRankTerm#regnum">
+        <rdfs:label>Regnum</rdfs:label>
+        <dcterms:title>NameRank Regnum</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>Regnum</b>)</dcterms:description>
+        <nsl:id>regnum</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>10</boa:sortOrder>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <boa_name:rankAbbrev rdf:dataType='&xsd;string'>reg.</boa_name:rankAbbrev>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Rank-major'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Rank-hidden'/>
+
+    </boa:NameRank>
+
+    <boa:NameRank rdf:about="http://biodiversity.org.au/voc/boa/NameRankTerm#division">
+        <rdfs:label>Division</rdfs:label>
+        <dcterms:title>NameRank Division</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>Division</b>)</dcterms:description>
+        <nsl:id>division</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>20</boa:sortOrder>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <boa_name:rankAbbrev rdf:dataType='&xsd;string'>div.</boa_name:rankAbbrev>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Rank-major'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Rank-hidden'/>
+
+    </boa:NameRank>
+
+    <boa:NameRank rdf:about="http://biodiversity.org.au/voc/boa/NameRankTerm#classis">
+        <rdfs:label>Classis</rdfs:label>
+        <dcterms:title>NameRank Classis</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>Classis</b>)</dcterms:description>
+        <nsl:id>classis</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>30</boa:sortOrder>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <boa_name:rankAbbrev rdf:dataType='&xsd;string'>cl.</boa_name:rankAbbrev>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Rank-major'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Rank-hidden'/>
+
+    </boa:NameRank>
+
+    <boa:NameRank rdf:about="http://biodiversity.org.au/voc/boa/NameRankTerm#subclassis">
+        <rdfs:label>Subclassis</rdfs:label>
+        <dcterms:title>NameRank Subclassis</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>Subclassis</b>)</dcterms:description>
+        <nsl:id>subclassis</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>40</boa:sortOrder>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <boa_name:rankAbbrev rdf:dataType='&xsd;string'>subcl.</boa_name:rankAbbrev>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Rank-hidden'/>
+
+    </boa:NameRank>
+
+    <boa:NameRank rdf:about="http://biodiversity.org.au/voc/boa/NameRankTerm#superordo">
+        <rdfs:label>Superordo</rdfs:label>
+        <dcterms:title>NameRank Superordo</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>Superordo</b>)</dcterms:description>
+        <nsl:id>superordo</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>50</boa:sortOrder>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <boa_name:rankAbbrev rdf:dataType='&xsd;string'>superordo</boa_name:rankAbbrev>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Rank-hidden'/>
+
+    </boa:NameRank>
+
+    <boa:NameRank rdf:about="http://biodiversity.org.au/voc/boa/NameRankTerm#ordo">
+        <rdfs:label>Ordo</rdfs:label>
+        <dcterms:title>NameRank Ordo</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>Ordo</b>)</dcterms:description>
+        <nsl:id>ordo</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>60</boa:sortOrder>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <boa_name:rankAbbrev rdf:dataType='&xsd;string'>ordo</boa_name:rankAbbrev>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Rank-major'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Rank-hidden'/>
+
+    </boa:NameRank>
+
+    <boa:NameRank rdf:about="http://biodiversity.org.au/voc/boa/NameRankTerm#subordo">
+        <rdfs:label>Subordo</rdfs:label>
+        <dcterms:title>NameRank Subordo</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>Subordo</b>)</dcterms:description>
+        <nsl:id>subordo</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>70</boa:sortOrder>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <boa_name:rankAbbrev rdf:dataType='&xsd;string'>subordo</boa_name:rankAbbrev>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Rank-hidden'/>
+
+    </boa:NameRank>
+
+    <boa:NameRank rdf:about="http://biodiversity.org.au/voc/boa/NameRankTerm#familia">
+        <rdfs:label>Familia</rdfs:label>
+        <dcterms:title>NameRank Familia</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>Familia</b>)</dcterms:description>
+        <nsl:id>familia</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>80</boa:sortOrder>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <boa_name:rankAbbrev rdf:dataType='&xsd;string'>fam.</boa_name:rankAbbrev>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Rank-major'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Rank-hidden'/>
+
+    </boa:NameRank>
+
+    <boa:NameRank rdf:about="http://biodiversity.org.au/voc/boa/NameRankTerm#genus">
+        <rdfs:label>Genus</rdfs:label>
+        <dcterms:title>NameRank Genus</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>Genus</b>)</dcterms:description>
+        <nsl:id>genus</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>120</boa:sortOrder>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <boa_name:rankAbbrev rdf:dataType='&xsd;string'>gen.</boa_name:rankAbbrev>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Rank-major'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Rank-hidden'/>
+
+    </boa:NameRank>
+
+    <boa:NameRank rdf:about="http://biodiversity.org.au/voc/boa/NameRankTerm#subgenus">
+        <rdfs:label>Subgenus</rdfs:label>
+        <dcterms:title>NameRank Subgenus</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>Subgenus</b>)</dcterms:description>
+        <nsl:id>subgenus</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>130</boa:sortOrder>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <boa_name:rankAbbrev rdf:dataType='&xsd;string'>subg.</boa_name:rankAbbrev>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Rank-visible'/>
+
+    </boa:NameRank>
+
+    <boa:NameRank rdf:about="http://biodiversity.org.au/voc/boa/NameRankTerm#sectio">
+        <rdfs:label>Sectio</rdfs:label>
+        <dcterms:title>NameRank Sectio</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>Sectio</b>)</dcterms:description>
+        <nsl:id>sectio</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>140</boa:sortOrder>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <boa_name:rankAbbrev rdf:dataType='&xsd;string'>sect.</boa_name:rankAbbrev>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Rank-visible'/>
+
+    </boa:NameRank>
+
+    <boa:NameRank rdf:about="http://biodiversity.org.au/voc/boa/NameRankTerm#subsectio">
+        <rdfs:label>Subsectio</rdfs:label>
+        <dcterms:title>NameRank Subsectio</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>Subsectio</b>)</dcterms:description>
+        <nsl:id>subsectio</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>150</boa:sortOrder>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <boa_name:rankAbbrev rdf:dataType='&xsd;string'>subsect.</boa_name:rankAbbrev>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Rank-visible'/>
+
+    </boa:NameRank>
+
+    <boa:NameRank rdf:about="http://biodiversity.org.au/voc/boa/NameRankTerm#series">
+        <rdfs:label>Series</rdfs:label>
+        <dcterms:title>NameRank Series</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>Series</b>)</dcterms:description>
+        <nsl:id>series</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>160</boa:sortOrder>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <boa_name:rankAbbrev rdf:dataType='&xsd;string'>ser.</boa_name:rankAbbrev>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Rank-visible'/>
+
+    </boa:NameRank>
+
+    <boa:NameRank rdf:about="http://biodiversity.org.au/voc/boa/NameRankTerm#subseries">
+        <rdfs:label>Subseries</rdfs:label>
+        <dcterms:title>NameRank Subseries</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>Subseries</b>)</dcterms:description>
+        <nsl:id>subseries</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>170</boa:sortOrder>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <boa_name:rankAbbrev rdf:dataType='&xsd;string'>subser.</boa_name:rankAbbrev>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Rank-visible'/>
+
+    </boa:NameRank>
+
+    <boa:NameRank rdf:about="http://biodiversity.org.au/voc/boa/NameRankTerm#superspecies">
+        <rdfs:label>Superspecies</rdfs:label>
+        <dcterms:title>NameRank Superspecies</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>Superspecies</b>)</dcterms:description>
+        <nsl:id>superspecies</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>180</boa:sortOrder>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <boa_name:rankAbbrev rdf:dataType='&xsd;string'>supersp.</boa_name:rankAbbrev>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Rank-visible'/>
+
+    </boa:NameRank>
+
+    <boa:NameRank rdf:about="http://biodiversity.org.au/voc/boa/NameRankTerm#species">
+        <rdfs:label>Species</rdfs:label>
+        <dcterms:title>NameRank Species</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>Species</b>)</dcterms:description>
+        <nsl:id>species</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>190</boa:sortOrder>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <boa_name:rankAbbrev rdf:dataType='&xsd;string'>sp.</boa_name:rankAbbrev>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Rank-major'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Rank-hidden'/>
+
+    </boa:NameRank>
+
+    <boa:NameRank rdf:about="http://biodiversity.org.au/voc/boa/NameRankTerm#subspecies">
+        <rdfs:label>Subspecies</rdfs:label>
+        <dcterms:title>NameRank Subspecies</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>Subspecies</b>)</dcterms:description>
+        <nsl:id>subspecies</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>200</boa:sortOrder>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <boa_name:rankAbbrev rdf:dataType='&xsd;string'>subsp.</boa_name:rankAbbrev>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Rank-visible'/>
+
+    </boa:NameRank>
+
+    <boa:NameRank rdf:about="http://biodiversity.org.au/voc/boa/NameRankTerm#nothovarietas">
+        <rdfs:label>Nothovarietas</rdfs:label>
+        <dcterms:title>NameRank Nothovarietas</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>Nothovarietas</b>)</dcterms:description>
+        <nsl:id>nothovarietas</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>210</boa:sortOrder>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <boa_name:rankAbbrev rdf:dataType='&xsd;string'>nothovar.</boa_name:rankAbbrev>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Rank-visible'/>
+
+    </boa:NameRank>
+
+    <boa:NameRank rdf:about="http://biodiversity.org.au/voc/boa/NameRankTerm#varietas">
+        <rdfs:label>Varietas</rdfs:label>
+        <dcterms:title>NameRank Varietas</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>Varietas</b>)</dcterms:description>
+        <nsl:id>varietas</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>210</boa:sortOrder>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <boa_name:rankAbbrev rdf:dataType='&xsd;string'>var.</boa_name:rankAbbrev>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Rank-visible'/>
+
+    </boa:NameRank>
+
+    <boa:NameRank rdf:about="http://biodiversity.org.au/voc/boa/NameRankTerm#subvarietas">
+        <rdfs:label>Subvarietas</rdfs:label>
+        <dcterms:title>NameRank Subvarietas</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>Subvarietas</b>)</dcterms:description>
+        <nsl:id>subvarietas</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>220</boa:sortOrder>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <boa_name:rankAbbrev rdf:dataType='&xsd;string'>subvar.</boa_name:rankAbbrev>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Rank-visible'/>
+
+    </boa:NameRank>
+
+    <boa:NameRank rdf:about="http://biodiversity.org.au/voc/boa/NameRankTerm#forma">
+        <rdfs:label>Forma</rdfs:label>
+        <dcterms:title>NameRank Forma</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>Forma</b>)</dcterms:description>
+        <nsl:id>forma</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>230</boa:sortOrder>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <boa_name:rankAbbrev rdf:dataType='&xsd;string'>f.</boa_name:rankAbbrev>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Rank-visible'/>
+
+    </boa:NameRank>
+
+    <boa:NameRank rdf:about="http://biodiversity.org.au/voc/boa/NameRankTerm#subforma">
+        <rdfs:label>Subforma</rdfs:label>
+        <dcterms:title>NameRank Subforma</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>Subforma</b>)</dcterms:description>
+        <nsl:id>subforma</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>240</boa:sortOrder>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <boa_name:rankAbbrev rdf:dataType='&xsd;string'>subf.</boa_name:rankAbbrev>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Rank-visible'/>
+
+    </boa:NameRank>
+
+    <boa:NameRank rdf:about="http://biodiversity.org.au/voc/boa/NameRankTerm#form-taxon">
+        <rdfs:label>form taxon</rdfs:label>
+        <dcterms:title>NameRank form taxon</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>form taxon</b>)</dcterms:description>
+        <nsl:id>form-taxon</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>250</boa:sortOrder>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <boa_name:rankAbbrev rdf:dataType='&xsd;string'>form taxon</boa_name:rankAbbrev>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/nsl/NSL#Deprecated'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Rank-hidden'/>
+
+    </boa:NameRank>
+
+    <boa:NameRank rdf:about="http://biodiversity.org.au/voc/boa/NameRankTerm#morphological-var">
+        <rdfs:label>morphological var.</rdfs:label>
+        <dcterms:title>NameRank morphological var.</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>morphological var.</b>)</dcterms:description>
+        <nsl:id>morphological-var</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>260</boa:sortOrder>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <boa_name:rankAbbrev rdf:dataType='&xsd;string'>morph.</boa_name:rankAbbrev>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/nsl/NSL#Deprecated'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Rank-hidden'/>
+
+    </boa:NameRank>
+
+    <boa:NameRank rdf:about="http://biodiversity.org.au/voc/boa/NameRankTerm#nothomorph">
+        <rdfs:label>nothomorph.</rdfs:label>
+        <dcterms:title>NameRank nothomorph.</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>nothomorph.</b>)</dcterms:description>
+        <nsl:id>nothomorph</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>270</boa:sortOrder>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <boa_name:rankAbbrev rdf:dataType='&xsd;string'>nothomorph</boa_name:rankAbbrev>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/nsl/NSL#Deprecated'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Rank-hidden'/>
+
+    </boa:NameRank>
+
+    <boa:NameRank rdf:about="http://biodiversity.org.au/voc/boa/NameRankTerm#n-a">
+        <rdfs:label>[n/a]</rdfs:label>
+        <dcterms:title>NameRank [n/a]</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>[n/a]</b>)</dcterms:description>
+        <nsl:id>n-a</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>500</boa:sortOrder>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <boa_name:rankAbbrev rdf:dataType='&xsd;string'>[n/a]</boa_name:rankAbbrev>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Rank-hidden'/>
+
+    </boa:NameRank>
+
+    <boa:NameRank rdf:about="http://biodiversity.org.au/voc/boa/NameRankTerm#regio">
+        <rdfs:label>Regio</rdfs:label>
+        <dcterms:title>NameRank Regio</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>Regio</b>)</dcterms:description>
+        <nsl:id>regio</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>8</boa:sortOrder>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <boa_name:rankAbbrev rdf:dataType='&xsd;string'>regio</boa_name:rankAbbrev>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Rank-major'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Rank-hidden'/>
+
+    </boa:NameRank>
+
+    <boa:NameRank rdf:about="http://biodiversity.org.au/voc/boa/NameRankTerm#subfamilia">
+        <rdfs:label>Subfamilia</rdfs:label>
+        <dcterms:title>NameRank Subfamilia</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>Subfamilia</b>)</dcterms:description>
+        <nsl:id>subfamilia</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>90</boa:sortOrder>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <boa_name:rankAbbrev rdf:dataType='&xsd;string'>subfam.</boa_name:rankAbbrev>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Rank-hidden'/>
+
+    </boa:NameRank>
+
+    <boa:NameRank rdf:about="http://biodiversity.org.au/voc/boa/NameRankTerm#subtribus">
+        <rdfs:label>Subtribus</rdfs:label>
+        <dcterms:title>NameRank Subtribus</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>Subtribus</b>)</dcterms:description>
+        <nsl:id>subtribus</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>110</boa:sortOrder>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <boa_name:rankAbbrev rdf:dataType='&xsd;string'>subtrib.</boa_name:rankAbbrev>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Rank-hidden'/>
+
+    </boa:NameRank>
+
+    <boa:NameRank rdf:about="http://biodiversity.org.au/voc/boa/NameRankTerm#infrafamily">
+        <rdfs:label>[infrafamily]</rdfs:label>
+        <dcterms:title>NameRank [infrafamily]</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>[infrafamily]</b>)</dcterms:description>
+        <nsl:id>infrafamily</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>500</boa:sortOrder>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <boa_name:rankAbbrev rdf:dataType='&xsd;string'>[infrafamily]</boa_name:rankAbbrev>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Rank-visible'/>
+
+    </boa:NameRank>
+
+    <boa:NameRank rdf:about="http://biodiversity.org.au/voc/boa/NameRankTerm#infragenus">
+        <rdfs:label>[infragenus]</rdfs:label>
+        <dcterms:title>NameRank [infragenus]</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>[infragenus]</b>)</dcterms:description>
+        <nsl:id>infragenus</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>500</boa:sortOrder>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <boa_name:rankAbbrev rdf:dataType='&xsd;string'>[infragenus]</boa_name:rankAbbrev>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Rank-visible'/>
+
+    </boa:NameRank>
+
+    <boa:NameRank rdf:about="http://biodiversity.org.au/voc/boa/NameRankTerm#unknown">
+        <rdfs:label>[unknown]</rdfs:label>
+        <dcterms:title>NameRank [unknown]</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>[unknown]</b>)</dcterms:description>
+        <nsl:id>unknown</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>500</boa:sortOrder>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <boa_name:rankAbbrev rdf:dataType='&xsd;string'>[unknown]</boa_name:rankAbbrev>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/nsl/NSL#Deprecated'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Rank-hidden'/>
+
+    </boa:NameRank>
+
+    <boa:NameRank rdf:about="http://biodiversity.org.au/voc/boa/NameRankTerm#unranked">
+        <rdfs:label>[unranked]</rdfs:label>
+        <dcterms:title>NameRank [unranked]</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>[unranked]</b>)</dcterms:description>
+        <nsl:id>unranked</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>500</boa:sortOrder>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <boa_name:rankAbbrev rdf:dataType='&xsd;string'>[unranked]</boa_name:rankAbbrev>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Rank-visible'/>
+
+    </boa:NameRank>
+
+    <boa:NameRank rdf:about="http://biodiversity.org.au/voc/boa/NameRankTerm#infraspecies">
+        <rdfs:label>[infraspecies]</rdfs:label>
+        <dcterms:title>NameRank [infraspecies]</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>[infraspecies]</b>)</dcterms:description>
+        <nsl:id>infraspecies</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>500</boa:sortOrder>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <boa_name:rankAbbrev rdf:dataType='&xsd;string'>[infrasp.]</boa_name:rankAbbrev>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Rank-hidden'/>
+
+    </boa:NameRank>
+
+    <boa:NameRank rdf:about="http://biodiversity.org.au/voc/boa/NameRankTerm#tribus">
+        <rdfs:label>Tribus</rdfs:label>
+        <dcterms:title>NameRank Tribus</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>Tribus</b>)</dcterms:description>
+        <nsl:id>tribus</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>100</boa:sortOrder>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <boa_name:rankAbbrev rdf:dataType='&xsd;string'>trib.</boa_name:rankAbbrev>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Rank-hidden'/>
+
+    </boa:NameRank>
+
+</rdf:RDF>

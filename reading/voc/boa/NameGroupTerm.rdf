@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE rdf:RDF [
+        <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+        <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+        <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+        <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+        ]>
+
+<rdf:RDF
+        xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+        xmlns:owl="http://www.w3.org/2002/07/owl#"
+        xmlns:dcterms="http://purl.org/dc/terms/"
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+
+        xmlns:boa="http://biodiversity.org.au/voc/boa/BOA#"
+        xmlns:boa_name="http://biodiversity.org.au/voc/boa/Name#"
+        xmlns:boa_name_type="http://biodiversity.org.au/voc/boa/NameType#"
+        xmlns:boa_auth="http://biodiversity.org.au/voc/boa/Author#"
+        xmlns:boa_ref="http://biodiversity.org.au/voc/boa/Reference#"
+        xmlns:boa_rel="http://biodiversity.org.au/voc/boa/relationship#"
+        xmlns:boa_inst="http://biodiversity.org.au/voc/boa/Instance#"
+        xmlns:boa_instNote="http://biodiversity.org.au/voc/nsl/InstanceNote#"
+        xmlns:boa_er="http://biodiversity.org.au/voc/nsl/ExternalReference#"
+        xmlns:nsl="http://biodiversity.org.au/voc/nsl/NSL#"
+        >
+
+    <owl:Ontology rdf:about="http://biodiversity.org.au/voc/boa/NameGroupTerm#ONTOLOGY">
+        <rdfs:isDefinedBy rdf:resource="http://biodiversity.org.au/voc/boa/NameGroupTerm#ONTOLOGY"/>
+        <rdfs:label>NameGroup terms ontology</rdfs:label>
+        <rdf:seeAlso rdf:resource="http://biodiversity.org.au/voc/boa/NameGroup"/>
+        <dcterms:title>NameGroup terms - List of terms used in BOA</dcterms:title>
+        <dcterms:description rdf:parseType='Literal' rdf:dataType='&rdf;XMLLiteral'>
+            <div xmlns='http://www.w3.org/1999/xhtml' class='description NameGroup'>
+                <div class="header">NameGroup terms ontology</div>
+                <div class="content">List of terms appearing in BOA of type NameGroup</div>
+            </div>
+        </dcterms:description>
+    </owl:Ontology>
+
+    <boa:NameGroup rdf:about="http://biodiversity.org.au/voc/boa/NameGroupTerm#unknown">
+        <rdfs:label>[unknown]</rdfs:label>
+        <dcterms:title>NameGroup [unknown]</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>[unknown]</b>)</dcterms:description>
+        <nsl:id>unknown</nsl:id>
+
+    </boa:NameGroup>
+
+    <boa:NameGroup rdf:about="http://biodiversity.org.au/voc/boa/NameGroupTerm#n-a">
+        <rdfs:label>[n/a]</rdfs:label>
+        <dcterms:title>NameGroup [n/a]</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>[n/a]</b>)</dcterms:description>
+        <nsl:id>n-a</nsl:id>
+
+    </boa:NameGroup>
+
+    <boa:NameGroup rdf:about="http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical">
+        <rdfs:label>botanical</rdfs:label>
+        <dcterms:title>NameGroup botanical</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>botanical</b>)</dcterms:description>
+        <nsl:id>botanical</nsl:id>
+
+    </boa:NameGroup>
+
+    <boa:NameGroup rdf:about="http://biodiversity.org.au/voc/boa/NameGroupTerm#zoological">
+        <rdfs:label>zoological</rdfs:label>
+        <dcterms:title>NameGroup zoological</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>zoological</b>)</dcterms:description>
+        <nsl:id>zoological</nsl:id>
+
+    </boa:NameGroup>
+
+</rdf:RDF>

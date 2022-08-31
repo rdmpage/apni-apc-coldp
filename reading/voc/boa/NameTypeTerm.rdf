@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE rdf:RDF [
+        <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+        <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+        <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+        <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+        ]>
+
+<rdf:RDF
+        xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+        xmlns:owl="http://www.w3.org/2002/07/owl#"
+        xmlns:dcterms="http://purl.org/dc/terms/"
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+
+        xmlns:boa="http://biodiversity.org.au/voc/boa/BOA#"
+        xmlns:boa_name="http://biodiversity.org.au/voc/boa/Name#"
+        xmlns:boa_name_type="http://biodiversity.org.au/voc/boa/NameType#"
+        xmlns:boa_auth="http://biodiversity.org.au/voc/boa/Author#"
+        xmlns:boa_ref="http://biodiversity.org.au/voc/boa/Reference#"
+        xmlns:boa_rel="http://biodiversity.org.au/voc/boa/relationship#"
+        xmlns:boa_inst="http://biodiversity.org.au/voc/boa/Instance#"
+        xmlns:boa_instNote="http://biodiversity.org.au/voc/nsl/InstanceNote#"
+        xmlns:boa_er="http://biodiversity.org.au/voc/nsl/ExternalReference#"
+        xmlns:nsl="http://biodiversity.org.au/voc/nsl/NSL#"
+        >
+
+    <owl:Ontology rdf:about="http://biodiversity.org.au/voc/boa/NameTypeTerm#ONTOLOGY">
+        <rdfs:isDefinedBy rdf:resource="http://biodiversity.org.au/voc/boa/NameTypeTerm#ONTOLOGY"/>
+        <rdfs:label>NameType terms ontology</rdfs:label>
+        <rdf:seeAlso rdf:resource="http://biodiversity.org.au/voc/boa/NameType"/>
+        <dcterms:title>NameType terms - List of terms used in BOA</dcterms:title>
+        <dcterms:description rdf:parseType='Literal' rdf:dataType='&rdf;XMLLiteral'>
+            <div xmlns='http://www.w3.org/1999/xhtml' class='description NameType'>
+                <div class="header">NameType terms ontology</div>
+                <div class="content">List of terms appearing in BOA of type NameType</div>
+            </div>
+        </dcterms:description>
+    </owl:Ontology>
+
+    <boa:NameType rdf:about="http://biodiversity.org.au/voc/boa/NameTypeTerm#default">
+        <rdfs:label>[default]</rdfs:label>
+        <dcterms:title>NameType [default]</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>[default]</b>)</dcterms:description>
+        <nsl:id>default</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>1</boa:sortOrder>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#n-a'/>
+        <boa_name:typeCategory rdf:resource='http://biodiversity.org.au/voc/boa/NameCategoryTerm#null'/>
+
+    </boa:NameType>
+
+    <boa:NameType rdf:about="http://biodiversity.org.au/voc/boa/NameTypeTerm#n-a">
+        <rdfs:label>[n/a]</rdfs:label>
+        <dcterms:title>NameType [n/a]</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>[n/a]</b>)</dcterms:description>
+        <nsl:id>n-a</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>3</boa:sortOrder>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#n-a'/>
+        <boa_name:typeCategory rdf:resource='http://biodiversity.org.au/voc/boa/NameCategoryTerm#null'/>
+
+    </boa:NameType>
+
+    <boa:NameType rdf:about="http://biodiversity.org.au/voc/boa/NameTypeTerm#unknown">
+        <rdfs:label>[unknown]</rdfs:label>
+        <dcterms:title>NameType [unknown]</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>[unknown]</b>)</dcterms:description>
+        <nsl:id>unknown</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>2</boa:sortOrder>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#n-a'/>
+        <boa_name:typeCategory rdf:resource='http://biodiversity.org.au/voc/boa/NameCategoryTerm#null'/>
+
+    </boa:NameType>
+
+    <boa:NameType rdf:about="http://biodiversity.org.au/voc/boa/NameTypeTerm#acra">
+        <rdfs:label>acra</rdfs:label>
+        <dcterms:title>NameType acra</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>acra</b>)</dcterms:description>
+        <nsl:id>acra</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>20</boa:sortOrder>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <boa_name:typeCategory rdf:resource='http://biodiversity.org.au/voc/boa/NameCategoryTerm#cultivar'/>
+
+    </boa:NameType>
+
+    <boa:NameType rdf:about="http://biodiversity.org.au/voc/boa/NameTypeTerm#acra-hybrid">
+        <rdfs:label>acra hybrid</rdfs:label>
+        <dcterms:title>NameType acra hybrid</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>acra hybrid</b>)</dcterms:description>
+        <nsl:id>acra-hybrid</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>21</boa:sortOrder>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <boa_name:typeCategory rdf:resource='http://biodiversity.org.au/voc/boa/NameCategoryTerm#null'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Type-hybrid'/>
+
+    </boa:NameType>
+
+    <boa:NameType rdf:about="http://biodiversity.org.au/voc/boa/NameTypeTerm#autonym">
+        <rdfs:label>autonym</rdfs:label>
+        <dcterms:title>NameType autonym</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>autonym</b>)</dcterms:description>
+        <nsl:id>autonym</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>13</boa:sortOrder>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <boa_name:typeCategory rdf:resource='http://biodiversity.org.au/voc/boa/NameCategoryTerm#scientific'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Type-autonym'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Type-scientific'/>
+
+    </boa:NameType>
+
+    <boa:NameType rdf:about="http://biodiversity.org.au/voc/boa/NameTypeTerm#common">
+        <rdfs:label>common</rdfs:label>
+        <dcterms:title>NameType common</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>common</b>)</dcterms:description>
+        <nsl:id>common</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>15</boa:sortOrder>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <boa_name:typeCategory rdf:resource='http://biodiversity.org.au/voc/boa/NameCategoryTerm#null'/>
+
+    </boa:NameType>
+
+    <boa:NameType rdf:about="http://biodiversity.org.au/voc/boa/NameTypeTerm#cultivar">
+        <rdfs:label>cultivar</rdfs:label>
+        <dcterms:title>NameType cultivar</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>cultivar</b>)</dcterms:description>
+        <nsl:id>cultivar</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>17</boa:sortOrder>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <boa_name:typeCategory rdf:resource='http://biodiversity.org.au/voc/boa/NameCategoryTerm#cultivar'/>
+
+    </boa:NameType>
+
+    <boa:NameType rdf:about="http://biodiversity.org.au/voc/boa/NameTypeTerm#cultivar-hybrid">
+        <rdfs:label>cultivar hybrid</rdfs:label>
+        <dcterms:title>NameType cultivar hybrid</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>cultivar hybrid</b>)</dcterms:description>
+        <nsl:id>cultivar-hybrid</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>18</boa:sortOrder>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <boa_name:typeCategory rdf:resource='http://biodiversity.org.au/voc/boa/NameCategoryTerm#null'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Type-hybrid'/>
+
+    </boa:NameType>
+
+    <boa:NameType rdf:about="http://biodiversity.org.au/voc/boa/NameTypeTerm#cultivar-hybrid-formula">
+        <rdfs:label>cultivar hybrid formula</rdfs:label>
+        <dcterms:title>NameType cultivar hybrid formula</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>cultivar hybrid formula</b>)</dcterms:description>
+        <nsl:id>cultivar-hybrid-formula</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>19</boa:sortOrder>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <boa_name:typeCategory rdf:resource='http://biodiversity.org.au/voc/boa/NameCategoryTerm#null'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Type-formula'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Type-hybrid'/>
+        <boa_name:connector rdf:dataType='&xsd;string'>x</boa_name:connector>
+
+    </boa:NameType>
+
+    <boa:NameType rdf:about="http://biodiversity.org.au/voc/boa/NameTypeTerm#graft-chimera">
+        <rdfs:label>graft/chimera</rdfs:label>
+        <dcterms:title>NameType graft/chimera</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>graft / chimera</b>)</dcterms:description>
+        <nsl:id>graft-chimera</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>26</boa:sortOrder>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <boa_name:typeCategory rdf:resource='http://biodiversity.org.au/voc/boa/NameCategoryTerm#null'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Type-formula'/>
+        <boa_name:connector rdf:dataType='&xsd;string'>+</boa_name:connector>
+
+    </boa:NameType>
+
+    <boa:NameType rdf:about="http://biodiversity.org.au/voc/boa/NameTypeTerm#hybrid-autonym">
+        <rdfs:label>hybrid autonym</rdfs:label>
+        <dcterms:title>NameType hybrid autonym</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>hybrid autonym</b>)</dcterms:description>
+        <nsl:id>hybrid-autonym</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>11</boa:sortOrder>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <boa_name:typeCategory rdf:resource='http://biodiversity.org.au/voc/boa/NameCategoryTerm#null'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Type-autonym'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Type-hybrid'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Type-scientific'/>
+        <boa_name:connector rdf:dataType='&xsd;string'>x</boa_name:connector>
+
+    </boa:NameType>
+
+    <boa:NameType rdf:about="http://biodiversity.org.au/voc/boa/NameTypeTerm#hybrid-formula-parents-known">
+        <rdfs:label>hybrid formula parents known</rdfs:label>
+        <dcterms:title>NameType hybrid formula parents known</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>hybrid formula parents known</b>)</dcterms:description>
+        <nsl:id>hybrid-formula-parents-known</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>7</boa:sortOrder>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <boa_name:typeCategory rdf:resource='http://biodiversity.org.au/voc/boa/NameCategoryTerm#null'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Type-formula'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Type-hybrid'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Type-scientific'/>
+        <boa_name:connector rdf:dataType='&xsd;string'>x</boa_name:connector>
+
+    </boa:NameType>
+
+    <boa:NameType rdf:about="http://biodiversity.org.au/voc/boa/NameTypeTerm#hybrid-formula-unknown-2nd-parent">
+        <rdfs:label>hybrid formula unknown 2nd parent</rdfs:label>
+        <dcterms:title>NameType hybrid formula unknown 2nd parent</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>hybrid formula unknown 2nd parent</b>)</dcterms:description>
+        <nsl:id>hybrid-formula-unknown-2nd-parent</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>8</boa:sortOrder>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <boa_name:typeCategory rdf:resource='http://biodiversity.org.au/voc/boa/NameCategoryTerm#null'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Type-formula'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Type-hybrid'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Type-scientific'/>
+        <boa_name:connector rdf:dataType='&xsd;string'>x</boa_name:connector>
+
+    </boa:NameType>
+
+    <boa:NameType rdf:about="http://biodiversity.org.au/voc/boa/NameTypeTerm#informal">
+        <rdfs:label>informal</rdfs:label>
+        <dcterms:title>NameType informal</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>informal</b>)</dcterms:description>
+        <nsl:id>informal</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>27</boa:sortOrder>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <boa_name:typeCategory rdf:resource='http://biodiversity.org.au/voc/boa/NameCategoryTerm#null'/>
+
+    </boa:NameType>
+
+    <boa:NameType rdf:about="http://biodiversity.org.au/voc/boa/NameTypeTerm#intergrade">
+        <rdfs:label>intergrade</rdfs:label>
+        <dcterms:title>NameType intergrade</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>intergrade</b>)</dcterms:description>
+        <nsl:id>intergrade</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>12</boa:sortOrder>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <boa_name:typeCategory rdf:resource='http://biodiversity.org.au/voc/boa/NameCategoryTerm#null'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Type-formula'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Type-hybrid'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Type-scientific'/>
+        <boa_name:connector rdf:dataType='&xsd;string'>-</boa_name:connector>
+
+    </boa:NameType>
+
+    <boa:NameType rdf:about="http://biodiversity.org.au/voc/boa/NameTypeTerm#named-hybrid">
+        <rdfs:label>named hybrid</rdfs:label>
+        <dcterms:title>NameType named hybrid</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>named hybrid</b>)</dcterms:description>
+        <nsl:id>named-hybrid</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>9</boa:sortOrder>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <boa_name:typeCategory rdf:resource='http://biodiversity.org.au/voc/boa/NameCategoryTerm#scientific'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Type-hybrid'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Type-scientific'/>
+        <boa_name:connector rdf:dataType='&xsd;string'>x</boa_name:connector>
+
+    </boa:NameType>
+
+    <boa:NameType rdf:about="http://biodiversity.org.au/voc/boa/NameTypeTerm#named-hybrid-autonym">
+        <rdfs:label>named hybrid autonym</rdfs:label>
+        <dcterms:title>NameType named hybrid autonym</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>named hybrid autonym</b>)</dcterms:description>
+        <nsl:id>named-hybrid-autonym</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>10</boa:sortOrder>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <boa_name:typeCategory rdf:resource='http://biodiversity.org.au/voc/boa/NameCategoryTerm#scientific'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Type-autonym'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Type-hybrid'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Type-scientific'/>
+        <boa_name:connector rdf:dataType='&xsd;string'>x</boa_name:connector>
+
+    </boa:NameType>
+
+    <boa:NameType rdf:about="http://biodiversity.org.au/voc/boa/NameTypeTerm#pbr">
+        <rdfs:label>pbr</rdfs:label>
+        <dcterms:title>NameType pbr</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>pbr</b>)</dcterms:description>
+        <nsl:id>pbr</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>22</boa:sortOrder>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <boa_name:typeCategory rdf:resource='http://biodiversity.org.au/voc/boa/NameCategoryTerm#cultivar'/>
+
+    </boa:NameType>
+
+    <boa:NameType rdf:about="http://biodiversity.org.au/voc/boa/NameTypeTerm#pbr-hybrid">
+        <rdfs:label>pbr hybrid</rdfs:label>
+        <dcterms:title>NameType pbr hybrid</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>pbr hybrid</b>)</dcterms:description>
+        <nsl:id>pbr-hybrid</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>23</boa:sortOrder>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <boa_name:typeCategory rdf:resource='http://biodiversity.org.au/voc/boa/NameCategoryTerm#null'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Type-hybrid'/>
+
+    </boa:NameType>
+
+    <boa:NameType rdf:about="http://biodiversity.org.au/voc/boa/NameTypeTerm#phrase-name">
+        <rdfs:label>phrase name</rdfs:label>
+        <dcterms:title>NameType phrase name</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>phrase name</b>)</dcterms:description>
+        <nsl:id>phrase-name</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>6</boa:sortOrder>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <boa_name:typeCategory rdf:resource='http://biodiversity.org.au/voc/boa/NameCategoryTerm#null'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Type-scientific'/>
+
+    </boa:NameType>
+
+    <boa:NameType rdf:about="http://biodiversity.org.au/voc/boa/NameTypeTerm#sanctioned">
+        <rdfs:label>sanctioned</rdfs:label>
+        <dcterms:title>NameType sanctioned</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>sanctioned</b>)</dcterms:description>
+        <nsl:id>sanctioned</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>5</boa:sortOrder>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <boa_name:typeCategory rdf:resource='http://biodiversity.org.au/voc/boa/NameCategoryTerm#scientific'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Type-scientific'/>
+
+    </boa:NameType>
+
+    <boa:NameType rdf:about="http://biodiversity.org.au/voc/boa/NameTypeTerm#scientific">
+        <rdfs:label>scientific</rdfs:label>
+        <dcterms:title>NameType scientific</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>scientific</b>)</dcterms:description>
+        <nsl:id>scientific</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>4</boa:sortOrder>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <boa_name:typeCategory rdf:resource='http://biodiversity.org.au/voc/boa/NameCategoryTerm#scientific'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Type-scientific'/>
+
+    </boa:NameType>
+
+    <boa:NameType rdf:about="http://biodiversity.org.au/voc/boa/NameTypeTerm#trade">
+        <rdfs:label>trade</rdfs:label>
+        <dcterms:title>NameType trade</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>trade</b>)</dcterms:description>
+        <nsl:id>trade</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>24</boa:sortOrder>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <boa_name:typeCategory rdf:resource='http://biodiversity.org.au/voc/boa/NameCategoryTerm#cultivar'/>
+
+    </boa:NameType>
+
+    <boa:NameType rdf:about="http://biodiversity.org.au/voc/boa/NameTypeTerm#trade-hybrid">
+        <rdfs:label>trade hybrid</rdfs:label>
+        <dcterms:title>NameType trade hybrid</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>trade hybrid</b>)</dcterms:description>
+        <nsl:id>trade-hybrid</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>25</boa:sortOrder>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <boa_name:typeCategory rdf:resource='http://biodiversity.org.au/voc/boa/NameCategoryTerm#null'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Name#Type-hybrid'/>
+
+    </boa:NameType>
+
+    <boa:NameType rdf:about="http://biodiversity.org.au/voc/boa/NameTypeTerm#vernacular">
+        <rdfs:label>vernacular</rdfs:label>
+        <dcterms:title>NameType vernacular</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>vernacular</b>)</dcterms:description>
+        <nsl:id>vernacular</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>16</boa:sortOrder>
+        <boa_name:appliesToGroup rdf:resource='http://biodiversity.org.au/voc/boa/NameGroupTerm#botanical'/>
+        <boa_name:typeCategory rdf:resource='http://biodiversity.org.au/voc/boa/NameCategoryTerm#null'/>
+
+    </boa:NameType>
+
+</rdf:RDF>

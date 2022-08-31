@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE rdf:RDF [
+        <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+        <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+        <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+        <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+        ]>
+
+<rdf:RDF
+        xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+        xmlns:owl="http://www.w3.org/2002/07/owl#"
+        xmlns:dcterms="http://purl.org/dc/terms/"
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+
+        xmlns:boa="http://biodiversity.org.au/voc/boa/BOA#"
+        xmlns:boa_name="http://biodiversity.org.au/voc/boa/Name#"
+        xmlns:boa_name_type="http://biodiversity.org.au/voc/boa/NameType#"
+        xmlns:boa_auth="http://biodiversity.org.au/voc/boa/Author#"
+        xmlns:boa_ref="http://biodiversity.org.au/voc/boa/Reference#"
+        xmlns:boa_rel="http://biodiversity.org.au/voc/boa/relationship#"
+        xmlns:boa_inst="http://biodiversity.org.au/voc/boa/Instance#"
+        xmlns:boa_instNote="http://biodiversity.org.au/voc/nsl/InstanceNote#"
+        xmlns:boa_er="http://biodiversity.org.au/voc/nsl/ExternalReference#"
+        xmlns:nsl="http://biodiversity.org.au/voc/nsl/NSL#"
+        >
+
+    <owl:Ontology rdf:about="http://biodiversity.org.au/voc/boa/ReferenceTypeTerm#ONTOLOGY">
+        <rdfs:isDefinedBy rdf:resource="http://biodiversity.org.au/voc/boa/ReferenceTypeTerm#ONTOLOGY"/>
+        <rdfs:label>ReferenceType terms ontology</rdfs:label>
+        <rdf:seeAlso rdf:resource="http://biodiversity.org.au/voc/boa/ReferenceType"/>
+        <dcterms:title>ReferenceType terms - List of terms used in BOA</dcterms:title>
+        <dcterms:description rdf:parseType='Literal' rdf:dataType='&rdf;XMLLiteral'>
+            <div xmlns='http://www.w3.org/1999/xhtml' class='description ReferenceType'>
+                <div class="header">ReferenceType terms ontology</div>
+                <div class="content">List of terms appearing in BOA of type ReferenceType</div>
+            </div>
+        </dcterms:description>
+    </owl:Ontology>
+
+    <boa:ReferenceType rdf:about="http://biodiversity.org.au/voc/boa/ReferenceTypeTerm#database-record">
+        <rdfs:label>Database Record</rdfs:label>
+        <dcterms:title>ReferenceType Database Record</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>Database Record</b>)</dcterms:description>
+        <nsl:id>database-record</nsl:id>
+        <boa_ref:typeParent rdf:resource='http://biodiversity.org.au/voc/boa/ReferenceTypeTerm#database'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Reference#Type-parent-required'/>
+
+    </boa:ReferenceType>
+
+    <boa:ReferenceType rdf:about="http://biodiversity.org.au/voc/boa/ReferenceTypeTerm#paper">
+        <rdfs:label>Paper</rdfs:label>
+        <dcterms:title>ReferenceType Paper</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>Paper</b>)</dcterms:description>
+        <nsl:id>paper</nsl:id>
+        <boa_ref:typeParent rdf:resource='http://biodiversity.org.au/voc/boa/ReferenceTypeTerm#journal'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Reference#Type-parent-required'/>
+
+    </boa:ReferenceType>
+
+    <boa:ReferenceType rdf:about="http://biodiversity.org.au/voc/boa/ReferenceTypeTerm#section">
+        <rdfs:label>Section</rdfs:label>
+        <dcterms:title>ReferenceType Section</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>Section</b>)</dcterms:description>
+        <nsl:id>section</nsl:id>
+        <boa_ref:typeParent rdf:resource='http://biodiversity.org.au/voc/boa/ReferenceTypeTerm#book'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Reference#Type-parent-required'/>
+
+    </boa:ReferenceType>
+
+    <boa:ReferenceType rdf:about="http://biodiversity.org.au/voc/boa/ReferenceTypeTerm#unknown">
+        <rdfs:label>Unknown</rdfs:label>
+        <dcterms:title>ReferenceType Unknown</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>Unknown</b>)</dcterms:description>
+        <nsl:id>unknown</nsl:id>
+        <boa_ref:typeParent rdf:resource='http://biodiversity.org.au/voc/boa/ReferenceTypeTerm#unknown'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Reference#Type-parent-optional'/>
+
+    </boa:ReferenceType>
+
+    <boa:ReferenceType rdf:about="http://biodiversity.org.au/voc/boa/ReferenceTypeTerm#book">
+        <rdfs:label>Book</rdfs:label>
+        <dcterms:title>ReferenceType Book</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>Book</b>)</dcterms:description>
+        <nsl:id>book</nsl:id>
+        <boa_ref:typeParent rdf:resource='http://biodiversity.org.au/voc/boa/ReferenceTypeTerm#series'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Reference#Type-parent-optional'/>
+
+    </boa:ReferenceType>
+
+    <boa:ReferenceType rdf:about="http://biodiversity.org.au/voc/boa/ReferenceTypeTerm#chapter">
+        <rdfs:label>Chapter</rdfs:label>
+        <dcterms:title>ReferenceType Chapter</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>Chapter</b>)</dcterms:description>
+        <nsl:id>chapter</nsl:id>
+        <boa_ref:typeParent rdf:resource='http://biodiversity.org.au/voc/boa/ReferenceTypeTerm#book'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Reference#Type-parent-required'/>
+
+    </boa:ReferenceType>
+
+    <boa:ReferenceType rdf:about="http://biodiversity.org.au/voc/boa/ReferenceTypeTerm#personal-communication">
+        <rdfs:label>Personal Communication</rdfs:label>
+        <dcterms:title>ReferenceType Personal Communication</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>Personal Communication</b>)</dcterms:description>
+        <nsl:id>personal-communication</nsl:id>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Reference#Type-parent-required'/>
+
+    </boa:ReferenceType>
+
+    <boa:ReferenceType rdf:about="http://biodiversity.org.au/voc/boa/ReferenceTypeTerm#series">
+        <rdfs:label>Series</rdfs:label>
+        <dcterms:title>ReferenceType Series</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>Series</b>)</dcterms:description>
+        <nsl:id>series</nsl:id>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Reference#Type-parent-required'/>
+
+    </boa:ReferenceType>
+
+    <boa:ReferenceType rdf:about="http://biodiversity.org.au/voc/boa/ReferenceTypeTerm#journal">
+        <rdfs:label>Journal</rdfs:label>
+        <dcterms:title>ReferenceType Journal</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>Journal</b>)</dcterms:description>
+        <nsl:id>journal</nsl:id>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Reference#Type-parent-required'/>
+
+    </boa:ReferenceType>
+
+    <boa:ReferenceType rdf:about="http://biodiversity.org.au/voc/boa/ReferenceTypeTerm#index">
+        <rdfs:label>Index</rdfs:label>
+        <dcterms:title>ReferenceType Index</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>Index</b>)</dcterms:description>
+        <nsl:id>index</nsl:id>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Reference#Type-parent-required'/>
+
+    </boa:ReferenceType>
+
+    <boa:ReferenceType rdf:about="http://biodiversity.org.au/voc/boa/ReferenceTypeTerm#herbarium-annotation">
+        <rdfs:label>Herbarium annotation</rdfs:label>
+        <dcterms:title>ReferenceType Herbarium annotation</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>Herbarium annotation</b>)</dcterms:description>
+        <nsl:id>herbarium-annotation</nsl:id>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Reference#Type-parent-required'/>
+
+    </boa:ReferenceType>
+
+    <boa:ReferenceType rdf:about="http://biodiversity.org.au/voc/boa/ReferenceTypeTerm#database">
+        <rdfs:label>Database</rdfs:label>
+        <dcterms:title>ReferenceType Database</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>Database</b>)</dcterms:description>
+        <nsl:id>database</nsl:id>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Reference#Type-parent-required'/>
+
+    </boa:ReferenceType>
+
+    <boa:ReferenceType rdf:about="http://biodiversity.org.au/voc/boa/ReferenceTypeTerm#part">
+        <rdfs:label>Part</rdfs:label>
+        <dcterms:title>ReferenceType Part</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>Part</b>)</dcterms:description>
+        <nsl:id>part</nsl:id>
+        <boa_ref:typeParent rdf:resource='http://biodiversity.org.au/voc/boa/ReferenceTypeTerm#paper'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Reference#Type-parent-required'/>
+
+    </boa:ReferenceType>
+
+</rdf:RDF>

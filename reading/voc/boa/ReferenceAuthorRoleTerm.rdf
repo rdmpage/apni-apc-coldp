@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE rdf:RDF [
+        <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+        <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+        <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+        <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+        ]>
+
+<rdf:RDF
+        xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+        xmlns:owl="http://www.w3.org/2002/07/owl#"
+        xmlns:dcterms="http://purl.org/dc/terms/"
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+
+        xmlns:boa="http://biodiversity.org.au/voc/boa/BOA#"
+        xmlns:boa_name="http://biodiversity.org.au/voc/boa/Name#"
+        xmlns:boa_name_type="http://biodiversity.org.au/voc/boa/NameType#"
+        xmlns:boa_auth="http://biodiversity.org.au/voc/boa/Author#"
+        xmlns:boa_ref="http://biodiversity.org.au/voc/boa/Reference#"
+        xmlns:boa_rel="http://biodiversity.org.au/voc/boa/relationship#"
+        xmlns:boa_inst="http://biodiversity.org.au/voc/boa/Instance#"
+        xmlns:boa_instNote="http://biodiversity.org.au/voc/nsl/InstanceNote#"
+        xmlns:boa_er="http://biodiversity.org.au/voc/nsl/ExternalReference#"
+        xmlns:nsl="http://biodiversity.org.au/voc/nsl/NSL#"
+        >
+
+    <owl:Ontology rdf:about="http://biodiversity.org.au/voc/boa/ReferenceAuthorRoleTerm#ONTOLOGY">
+        <rdfs:isDefinedBy rdf:resource="http://biodiversity.org.au/voc/boa/ReferenceAuthorRoleTerm#ONTOLOGY"/>
+        <rdfs:label>ReferenceAuthorRole terms ontology</rdfs:label>
+        <rdf:seeAlso rdf:resource="http://biodiversity.org.au/voc/boa/ReferenceAuthorRole"/>
+        <dcterms:title>ReferenceAuthorRole terms - List of terms used in BOA</dcterms:title>
+        <dcterms:description rdf:parseType='Literal' rdf:dataType='&rdf;XMLLiteral'>
+            <div xmlns='http://www.w3.org/1999/xhtml' class='description ReferenceAuthorRole'>
+                <div class="header">ReferenceAuthorRole terms ontology</div>
+                <div class="content">List of terms appearing in BOA of type ReferenceAuthorRole</div>
+            </div>
+        </dcterms:description>
+    </owl:Ontology>
+
+    <boa:ReferenceAuthorRole rdf:about="http://biodiversity.org.au/voc/boa/ReferenceAuthorRoleTerm#unknown">
+        <rdfs:label>Unknown</rdfs:label>
+        <dcterms:title>ReferenceAuthorRole Unknown</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>Unknown</b>)</dcterms:description>
+        <nsl:id>unknown</nsl:id>
+
+    </boa:ReferenceAuthorRole>
+
+    <boa:ReferenceAuthorRole rdf:about="http://biodiversity.org.au/voc/boa/ReferenceAuthorRoleTerm#compiler">
+        <rdfs:label>Compiler</rdfs:label>
+        <dcterms:title>ReferenceAuthorRole Compiler</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>Compiler</b>)</dcterms:description>
+        <nsl:id>compiler</nsl:id>
+
+    </boa:ReferenceAuthorRole>
+
+    <boa:ReferenceAuthorRole rdf:about="http://biodiversity.org.au/voc/boa/ReferenceAuthorRoleTerm#editor">
+        <rdfs:label>Editor</rdfs:label>
+        <dcterms:title>ReferenceAuthorRole Editor</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>Editor</b>)</dcterms:description>
+        <nsl:id>editor</nsl:id>
+
+    </boa:ReferenceAuthorRole>
+
+    <boa:ReferenceAuthorRole rdf:about="http://biodiversity.org.au/voc/boa/ReferenceAuthorRoleTerm#author">
+        <rdfs:label>Author</rdfs:label>
+        <dcterms:title>ReferenceAuthorRole Author</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>Author</b>)</dcterms:description>
+        <nsl:id>author</nsl:id>
+
+    </boa:ReferenceAuthorRole>
+
+</rdf:RDF>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE rdf:RDF [
+        <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+        <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+        <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+        <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+        ]>
+
+<rdf:RDF
+        xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+        xmlns:owl="http://www.w3.org/2002/07/owl#"
+        xmlns:dcterms="http://purl.org/dc/terms/"
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+
+        xmlns:boa="http://biodiversity.org.au/voc/boa/BOA#"
+        xmlns:boa_name="http://biodiversity.org.au/voc/boa/Name#"
+        xmlns:boa_name_type="http://biodiversity.org.au/voc/boa/NameType#"
+        xmlns:boa_auth="http://biodiversity.org.au/voc/boa/Author#"
+        xmlns:boa_ref="http://biodiversity.org.au/voc/boa/Reference#"
+        xmlns:boa_rel="http://biodiversity.org.au/voc/boa/relationship#"
+        xmlns:boa_inst="http://biodiversity.org.au/voc/boa/Instance#"
+        xmlns:boa_instNote="http://biodiversity.org.au/voc/nsl/InstanceNote#"
+        xmlns:boa_er="http://biodiversity.org.au/voc/nsl/ExternalReference#"
+        xmlns:nsl="http://biodiversity.org.au/voc/nsl/NSL#"
+        >
+
+    <owl:Ontology rdf:about="http://biodiversity.org.au/voc/nsl/NamespaceTerm#ONTOLOGY">
+        <rdfs:isDefinedBy rdf:resource="http://biodiversity.org.au/voc/nsl/NamespaceTerm#ONTOLOGY"/>
+        <rdfs:label>Namespace terms ontology</rdfs:label>
+        <rdf:seeAlso rdf:resource="http://biodiversity.org.au/voc/nsl/Namespace"/>
+        <dcterms:title>Namespace terms - List of terms used in BOA</dcterms:title>
+        <dcterms:description rdf:parseType='Literal' rdf:dataType='&rdf;XMLLiteral'>
+            <div xmlns='http://www.w3.org/1999/xhtml' class='description Namespace'>
+                <div class="header">Namespace terms ontology</div>
+                <div class="content">List of terms appearing in BOA of type Namespace</div>
+            </div>
+        </dcterms:description>
+    </owl:Ontology>
+
+    <nsl:Namespace rdf:about="http://biodiversity.org.au/voc/nsl/NamespaceTerm#apni">
+        <rdfs:label>APNI</rdfs:label>
+        <dcterms:title>Namespace APNI</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>APNI</b>)</dcterms:description>
+        <nsl:id>apni</nsl:id>
+
+    </nsl:Namespace>
+
+    <nsl:Namespace rdf:about="http://biodiversity.org.au/voc/nsl/NamespaceTerm#anhsir">
+        <rdfs:label>ANHSIR</rdfs:label>
+        <dcterms:title>Namespace ANHSIR</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>ANHSIR</b>)</dcterms:description>
+        <nsl:id>anhsir</nsl:id>
+
+    </nsl:Namespace>
+
+    <nsl:Namespace rdf:about="http://biodiversity.org.au/voc/nsl/NamespaceTerm#amani">
+        <rdfs:label>AMANI</rdfs:label>
+        <dcterms:title>Namespace AMANI</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>AMANI</b>)</dcterms:description>
+        <nsl:id>amani</nsl:id>
+
+    </nsl:Namespace>
+
+    <nsl:Namespace rdf:about="http://biodiversity.org.au/voc/nsl/NamespaceTerm#lichen">
+        <rdfs:label>Lichen</rdfs:label>
+        <dcterms:title>Namespace Lichen</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>Lichen</b>)</dcterms:description>
+        <nsl:id>lichen</nsl:id>
+
+    </nsl:Namespace>
+
+    <nsl:Namespace rdf:about="http://biodiversity.org.au/voc/nsl/NamespaceTerm#fungi">
+        <rdfs:label>Fungi</rdfs:label>
+        <dcterms:title>Namespace Fungi</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>Fungi</b>)</dcterms:description>
+        <nsl:id>fungi</nsl:id>
+
+    </nsl:Namespace>
+
+</rdf:RDF>

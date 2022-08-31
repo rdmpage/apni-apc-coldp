@@ -1,0 +1,663 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE rdf:RDF [
+        <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+        <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+        <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+        <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+        ]>
+
+<rdf:RDF
+        xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+        xmlns:owl="http://www.w3.org/2002/07/owl#"
+        xmlns:dcterms="http://purl.org/dc/terms/"
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+
+        xmlns:boa="http://biodiversity.org.au/voc/boa/BOA#"
+        xmlns:boa_name="http://biodiversity.org.au/voc/boa/Name#"
+        xmlns:boa_name_type="http://biodiversity.org.au/voc/boa/NameType#"
+        xmlns:boa_auth="http://biodiversity.org.au/voc/boa/Author#"
+        xmlns:boa_ref="http://biodiversity.org.au/voc/boa/Reference#"
+        xmlns:boa_rel="http://biodiversity.org.au/voc/boa/relationship#"
+        xmlns:boa_inst="http://biodiversity.org.au/voc/boa/Instance#"
+        xmlns:boa_instNote="http://biodiversity.org.au/voc/nsl/InstanceNote#"
+        xmlns:boa_er="http://biodiversity.org.au/voc/nsl/ExternalReference#"
+        xmlns:nsl="http://biodiversity.org.au/voc/nsl/NSL#"
+        >
+
+    <owl:Ontology rdf:about="http://biodiversity.org.au/voc/boa/InstanceTypeTerm#ONTOLOGY">
+        <rdfs:isDefinedBy rdf:resource="http://biodiversity.org.au/voc/boa/InstanceTypeTerm#ONTOLOGY"/>
+        <rdfs:label>InstanceType terms ontology</rdfs:label>
+        <rdf:seeAlso rdf:resource="http://biodiversity.org.au/voc/boa/InstanceType"/>
+        <dcterms:title>InstanceType terms - List of terms used in BOA</dcterms:title>
+        <dcterms:description rdf:parseType='Literal' rdf:dataType='&rdf;XMLLiteral'>
+            <div xmlns='http://www.w3.org/1999/xhtml' class='description InstanceType'>
+                <div class="header">InstanceType terms ontology</div>
+                <div class="content">List of terms appearing in BOA of type InstanceType</div>
+            </div>
+        </dcterms:description>
+    </owl:Ontology>
+
+    <boa:InstanceType rdf:about="http://biodiversity.org.au/voc/boa/InstanceTypeTerm#default">
+        <rdfs:label>[default]</rdfs:label>
+        <dcterms:title>InstanceType [default]</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>[default]</b>)</dcterms:description>
+        <nsl:id>default</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>400</boa:sortOrder>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/boa/relationship#default'/>
+
+    </boa:InstanceType>
+
+    <boa:InstanceType rdf:about="http://biodiversity.org.au/voc/boa/InstanceTypeTerm#unknown">
+        <rdfs:label>[unknown]</rdfs:label>
+        <dcterms:title>InstanceType [unknown]</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>[unknown]</b>)</dcterms:description>
+        <nsl:id>unknown</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>400</boa:sortOrder>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/boa/relationship#unknown'/>
+
+    </boa:InstanceType>
+
+    <boa:InstanceType rdf:about="http://biodiversity.org.au/voc/boa/InstanceTypeTerm#n-a">
+        <rdfs:label>[n/a]</rdfs:label>
+        <dcterms:title>InstanceType [n/a]</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>[n/a]</b>)</dcterms:description>
+        <nsl:id>n-a</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>400</boa:sortOrder>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/boa/relationship#n-a'/>
+
+    </boa:InstanceType>
+
+    <boa:InstanceType rdf:about="http://biodiversity.org.au/voc/boa/InstanceTypeTerm#primary-reference">
+        <rdfs:label>primary reference</rdfs:label>
+        <dcterms:title>InstanceType primary reference</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>primary reference</b>)</dcterms:description>
+        <nsl:id>primary-reference</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>400</boa:sortOrder>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-primary'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-standalone'/>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/boa/relationship#primary-reference'/>
+
+    </boa:InstanceType>
+
+    <boa:InstanceType rdf:about="http://biodiversity.org.au/voc/boa/InstanceTypeTerm#tax-nov">
+        <rdfs:label>tax. nov.</rdfs:label>
+        <dcterms:title>InstanceType tax. nov.</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>tax. nov.</b>)</dcterms:description>
+        <nsl:id>tax-nov</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>400</boa:sortOrder>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-primary'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-protologue'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-standalone'/>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/boa/relationship#tax-nov'/>
+
+    </boa:InstanceType>
+
+    <boa:InstanceType rdf:about="http://biodiversity.org.au/voc/boa/InstanceTypeTerm#nom-nov">
+        <rdfs:label>nom. nov.</rdfs:label>
+        <dcterms:title>InstanceType nom. nov.</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>nom. nov.</b>)</dcterms:description>
+        <nsl:id>nom-nov</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>400</boa:sortOrder>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-primary'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-protologue'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-standalone'/>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/boa/relationship#nom-nov'/>
+
+    </boa:InstanceType>
+
+    <boa:InstanceType rdf:about="http://biodiversity.org.au/voc/boa/InstanceTypeTerm#nom-et-stat-nov">
+        <rdfs:label>nom. et stat. nov.</rdfs:label>
+        <dcterms:title>InstanceType nom. et stat. nov.</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>nom. et stat. nov.</b>)</dcterms:description>
+        <nsl:id>nom-et-stat-nov</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>400</boa:sortOrder>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-primary'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-protologue'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-standalone'/>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/boa/relationship#nom-et-stat-nov'/>
+
+    </boa:InstanceType>
+
+    <boa:InstanceType rdf:about="http://biodiversity.org.au/voc/boa/InstanceTypeTerm#comb-nov">
+        <rdfs:label>comb. nov.</rdfs:label>
+        <dcterms:title>InstanceType comb. nov.</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>comb. nov.</b>)</dcterms:description>
+        <nsl:id>comb-nov</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>400</boa:sortOrder>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-primary'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-protologue'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-standalone'/>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/boa/relationship#comb-nov'/>
+
+    </boa:InstanceType>
+
+    <boa:InstanceType rdf:about="http://biodiversity.org.au/voc/boa/InstanceTypeTerm#comb-et-stat-nov">
+        <rdfs:label>comb. et stat. nov.</rdfs:label>
+        <dcterms:title>InstanceType comb. et stat. nov.</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>comb. et stat. nov.</b>)</dcterms:description>
+        <nsl:id>comb-et-stat-nov</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>400</boa:sortOrder>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-primary'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-protologue'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-standalone'/>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/boa/relationship#comb-et-stat-nov'/>
+
+    </boa:InstanceType>
+
+    <boa:InstanceType rdf:about="http://biodiversity.org.au/voc/boa/InstanceTypeTerm#misapplied">
+        <rdfs:label>misapplied</rdfs:label>
+        <dcterms:title>InstanceType misapplied</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>misapplied</b>)</dcterms:description>
+        <nsl:id>misapplied</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>400</boa:sortOrder>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-citing'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-misapplied'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-relationship'/>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/boa/relationship#misapplied'/>
+
+    </boa:InstanceType>
+
+    <boa:InstanceType rdf:about="http://biodiversity.org.au/voc/boa/InstanceTypeTerm#pro-parte-misapplied">
+        <rdfs:label>pro parte misapplied</rdfs:label>
+        <dcterms:title>InstanceType pro parte misapplied</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>pro parte misapplied</b>)</dcterms:description>
+        <nsl:id>pro-parte-misapplied</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>70</boa:sortOrder>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-citing'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-misapplied'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-pro-parte'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-relationship'/>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/boa/relationship#pro-parte-misapplied'/>
+
+    </boa:InstanceType>
+
+    <boa:InstanceType rdf:about="http://biodiversity.org.au/voc/boa/InstanceTypeTerm#doubtful-misapplied">
+        <rdfs:label>doubtful misapplied</rdfs:label>
+        <dcterms:title>InstanceType doubtful misapplied</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>doubtful misapplied</b>)</dcterms:description>
+        <nsl:id>doubtful-misapplied</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>80</boa:sortOrder>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-citing'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-doubtful'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-misapplied'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-relationship'/>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/boa/relationship#doubtful-misapplied'/>
+
+    </boa:InstanceType>
+
+    <boa:InstanceType rdf:about="http://biodiversity.org.au/voc/boa/InstanceTypeTerm#secondary-reference">
+        <rdfs:label>secondary reference</rdfs:label>
+        <dcterms:title>InstanceType secondary reference</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>secondary reference</b>)</dcterms:description>
+        <nsl:id>secondary-reference</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>400</boa:sortOrder>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-secondary'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-standalone'/>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/boa/relationship#secondary-reference'/>
+
+    </boa:InstanceType>
+
+    <boa:InstanceType rdf:about="http://biodiversity.org.au/voc/boa/InstanceTypeTerm#excluded-name">
+        <rdfs:label>excluded name</rdfs:label>
+        <dcterms:title>InstanceType excluded name</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>excluded name</b>)</dcterms:description>
+        <nsl:id>excluded-name</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>400</boa:sortOrder>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/boa/relationship#excluded-name'/>
+
+    </boa:InstanceType>
+
+    <boa:InstanceType rdf:about="http://biodiversity.org.au/voc/boa/InstanceTypeTerm#synonym">
+        <rdfs:label>synonym</rdfs:label>
+        <dcterms:title>InstanceType synonym</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>synonym</b>)</dcterms:description>
+        <nsl:id>synonym</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>140</boa:sortOrder>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/nsl/NSL#Deprecated'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-citing'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-relationship'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-synonym'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-unsourced'/>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/boa/relationship#synonym'/>
+
+    </boa:InstanceType>
+
+    <boa:InstanceType rdf:about="http://biodiversity.org.au/voc/boa/InstanceTypeTerm#nomenclatural-synonym">
+        <rdfs:label>nomenclatural synonym</rdfs:label>
+        <dcterms:title>InstanceType nomenclatural synonym</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>nomenclatural synonym</b>)</dcterms:description>
+        <nsl:id>nomenclatural-synonym</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>30</boa:sortOrder>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-citing'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-nomenclatural'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-relationship'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-synonym'/>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/boa/relationship#nomenclatural-synonym'/>
+
+    </boa:InstanceType>
+
+    <boa:InstanceType rdf:about="http://biodiversity.org.au/voc/boa/InstanceTypeTerm#taxonomic-synonym">
+        <rdfs:label>taxonomic synonym</rdfs:label>
+        <dcterms:title>InstanceType taxonomic synonym</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>taxonomic synonym</b>)</dcterms:description>
+        <nsl:id>taxonomic-synonym</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>100</boa:sortOrder>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-citing'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-relationship'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-synonym'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-taxonomic'/>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/boa/relationship#taxonomic-synonym'/>
+
+    </boa:InstanceType>
+
+    <boa:InstanceType rdf:about="http://biodiversity.org.au/voc/boa/InstanceTypeTerm#pro-parte-synonym">
+        <rdfs:label>pro parte synonym</rdfs:label>
+        <dcterms:title>InstanceType pro parte synonym</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>pro parte synonym</b>)</dcterms:description>
+        <nsl:id>pro-parte-synonym</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>150</boa:sortOrder>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/nsl/NSL#Deprecated'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-citing'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-pro-parte'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-relationship'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-synonym'/>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/boa/relationship#pro-parte-synonym'/>
+
+    </boa:InstanceType>
+
+    <boa:InstanceType rdf:about="http://biodiversity.org.au/voc/boa/InstanceTypeTerm#pro-parte-taxonomic-synonym">
+        <rdfs:label>pro parte taxonomic synonym</rdfs:label>
+        <dcterms:title>InstanceType pro parte taxonomic synonym</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>pro parte taxonomic synonym</b>)</dcterms:description>
+        <nsl:id>pro-parte-taxonomic-synonym</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>110</boa:sortOrder>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-citing'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-pro-parte'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-relationship'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-synonym'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-taxonomic'/>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/boa/relationship#pro-parte-taxonomic-synonym'/>
+
+    </boa:InstanceType>
+
+    <boa:InstanceType rdf:about="http://biodiversity.org.au/voc/boa/InstanceTypeTerm#doubtful-synonym">
+        <rdfs:label>doubtful synonym</rdfs:label>
+        <dcterms:title>InstanceType doubtful synonym</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>doubtful synonym</b>)</dcterms:description>
+        <nsl:id>doubtful-synonym</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>160</boa:sortOrder>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/nsl/NSL#Deprecated'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-citing'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-doubtful'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-relationship'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-synonym'/>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/boa/relationship#doubtful-synonym'/>
+
+    </boa:InstanceType>
+
+    <boa:InstanceType rdf:about="http://biodiversity.org.au/voc/boa/InstanceTypeTerm#invalid-publication">
+        <rdfs:label>invalid publication</rdfs:label>
+        <dcterms:title>InstanceType invalid publication</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>invalid publication</b>)</dcterms:description>
+        <nsl:id>invalid-publication</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>400</boa:sortOrder>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/nsl/NSL#Deprecated'/>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/boa/relationship#invalid-publication'/>
+
+    </boa:InstanceType>
+
+    <boa:InstanceType rdf:about="http://biodiversity.org.au/voc/boa/InstanceTypeTerm#sens-lat">
+        <rdfs:label>sens. lat.</rdfs:label>
+        <dcterms:title>InstanceType sens. lat.</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>sens. lat.</b>)</dcterms:description>
+        <nsl:id>sens-lat</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>400</boa:sortOrder>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/nsl/NSL#Deprecated'/>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/boa/relationship#sens-lat'/>
+
+    </boa:InstanceType>
+
+    <boa:InstanceType rdf:about="http://biodiversity.org.au/voc/boa/InstanceTypeTerm#doubtful-taxonomic-synonym">
+        <rdfs:label>doubtful taxonomic synonym</rdfs:label>
+        <dcterms:title>InstanceType doubtful taxonomic synonym</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>doubtful taxonomic synonym</b>)</dcterms:description>
+        <nsl:id>doubtful-taxonomic-synonym</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>120</boa:sortOrder>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-citing'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-doubtful'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-relationship'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-synonym'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-taxonomic'/>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/boa/relationship#doubtful-taxonomic-synonym'/>
+
+    </boa:InstanceType>
+
+    <boa:InstanceType rdf:about="http://biodiversity.org.au/voc/boa/InstanceTypeTerm#doubtful-nomenclatural-synonym">
+        <rdfs:label>doubtful nomenclatural synonym</rdfs:label>
+        <dcterms:title>InstanceType doubtful nomenclatural synonym</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>doubtful nomenclatural synonym</b>)</dcterms:description>
+        <nsl:id>doubtful-nomenclatural-synonym</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>40</boa:sortOrder>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-doubtful'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-nomenclatural'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-synonym'/>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/boa/relationship#doubtful-nomenclatural-synonym'/>
+
+    </boa:InstanceType>
+
+    <boa:InstanceType rdf:about="http://biodiversity.org.au/voc/boa/InstanceTypeTerm#pro-parte-nomenclatural-synonym">
+        <rdfs:label>pro parte nomenclatural synonym</rdfs:label>
+        <dcterms:title>InstanceType pro parte nomenclatural synonym</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>pro parte nomenclatural synonym</b>)</dcterms:description>
+        <nsl:id>pro-parte-nomenclatural-synonym</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>50</boa:sortOrder>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-nomenclatural'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-pro-parte'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-synonym'/>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/boa/relationship#pro-parte-nomenclatural-synonym'/>
+
+    </boa:InstanceType>
+
+    <boa:InstanceType rdf:about="http://biodiversity.org.au/voc/boa/InstanceTypeTerm#stat-nov">
+        <rdfs:label>stat. nov.</rdfs:label>
+        <dcterms:title>InstanceType stat. nov.</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(<b>stat. nov.</b>)</dcterms:description>
+        <nsl:id>stat-nov</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>400</boa:sortOrder>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-primary'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-standalone'/>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/boa/relationship#stat-nov'/>
+
+    </boa:InstanceType>
+
+    <boa:InstanceType rdf:about="http://biodiversity.org.au/voc/boa/InstanceTypeTerm#basionym">
+        <rdfs:label>basionym</rdfs:label>
+        <dcterms:title>InstanceType basionym</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>basionym</b>)</dcterms:description>
+        <nsl:id>basionym</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>10</boa:sortOrder>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-citing'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-nomenclatural'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-relationship'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-synonym'/>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/boa/relationship#basionym'/>
+
+    </boa:InstanceType>
+
+    <boa:InstanceType rdf:about="http://biodiversity.org.au/voc/boa/InstanceTypeTerm#autonym">
+        <rdfs:label>autonym</rdfs:label>
+        <dcterms:title>InstanceType autonym</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>autonym</b>)</dcterms:description>
+        <nsl:id>autonym</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>400</boa:sortOrder>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-primary'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-standalone'/>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/boa/relationship#autonym'/>
+
+    </boa:InstanceType>
+
+    <boa:InstanceType rdf:about="http://biodiversity.org.au/voc/boa/InstanceTypeTerm#implicit-autonym">
+        <rdfs:label>implicit autonym</rdfs:label>
+        <dcterms:title>InstanceType implicit autonym</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>implicit autonym</b>)</dcterms:description>
+        <nsl:id>implicit-autonym</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>400</boa:sortOrder>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-primary'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-standalone'/>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/boa/relationship#implicit-autonym'/>
+
+    </boa:InstanceType>
+
+    <boa:InstanceType rdf:about="http://biodiversity.org.au/voc/boa/InstanceTypeTerm#homonym">
+        <rdfs:label>homonym</rdfs:label>
+        <dcterms:title>InstanceType homonym</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>homonym</b>)</dcterms:description>
+        <nsl:id>homonym</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>400</boa:sortOrder>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/nsl/NSL#Deprecated'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-standalone'/>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/boa/relationship#homonym'/>
+
+    </boa:InstanceType>
+
+    <boa:InstanceType rdf:about="http://biodiversity.org.au/voc/boa/InstanceTypeTerm#doubtful-pro-parte-synonym">
+        <rdfs:label>doubtful pro parte synonym</rdfs:label>
+        <dcterms:title>InstanceType doubtful pro parte synonym</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>doubtful pro parte synonym</b>)</dcterms:description>
+        <nsl:id>doubtful-pro-parte-synonym</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>170</boa:sortOrder>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/nsl/NSL#Deprecated'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-citing'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-doubtful'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-pro-parte'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-relationship'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-synonym'/>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/boa/relationship#doubtful-pro-parte-synonym'/>
+
+    </boa:InstanceType>
+
+    <boa:InstanceType rdf:about="http://biodiversity.org.au/voc/boa/InstanceTypeTerm#doubtful-pro-parte-taxonomic-synonym">
+        <rdfs:label>doubtful pro parte taxonomic synonym</rdfs:label>
+        <dcterms:title>InstanceType doubtful pro parte taxonomic synonym</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>doubtful pro parte taxonomic synonym</b>)</dcterms:description>
+        <nsl:id>doubtful-pro-parte-taxonomic-synonym</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>130</boa:sortOrder>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-citing'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-doubtful'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-pro-parte'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-relationship'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-synonym'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-taxonomic'/>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/boa/relationship#doubtful-pro-parte-taxonomic-synonym'/>
+
+    </boa:InstanceType>
+
+    <boa:InstanceType rdf:about="http://biodiversity.org.au/voc/boa/InstanceTypeTerm#explicit-autonym">
+        <rdfs:label>explicit autonym</rdfs:label>
+        <dcterms:title>InstanceType explicit autonym</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>explicit autonym</b>)</dcterms:description>
+        <nsl:id>explicit-autonym</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>0</boa:sortOrder>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-primary'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-standalone'/>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/boa/relationship#explicit-autonym'/>
+
+    </boa:InstanceType>
+
+    <boa:InstanceType rdf:about="http://biodiversity.org.au/voc/boa/InstanceTypeTerm#unsourced-misapplied">
+        <rdfs:label>unsourced misapplied</rdfs:label>
+        <dcterms:title>InstanceType unsourced misapplied</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>unsourced misapplied</b>)</dcterms:description>
+        <nsl:id>unsourced-misapplied</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>400</boa:sortOrder>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-citing'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-misapplied'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-relationship'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-unsourced'/>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/boa/relationship#unsourced-misapplied'/>
+
+    </boa:InstanceType>
+
+    <boa:InstanceType rdf:about="http://biodiversity.org.au/voc/boa/InstanceTypeTerm#unsourced-pro-parte-misapplied">
+        <rdfs:label>unsourced pro parte misapplied</rdfs:label>
+        <dcterms:title>InstanceType unsourced pro parte misapplied</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>unsourced pro parte misapplied</b>)</dcterms:description>
+        <nsl:id>unsourced-pro-parte-misapplied</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>70</boa:sortOrder>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-citing'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-misapplied'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-pro-parte'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-relationship'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-unsourced'/>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/boa/relationship#unsourced-pro-parte-misapplied'/>
+
+    </boa:InstanceType>
+
+    <boa:InstanceType rdf:about="http://biodiversity.org.au/voc/boa/InstanceTypeTerm#doubtful-pro-parte-misapplied">
+        <rdfs:label>doubtful pro parte misapplied</rdfs:label>
+        <dcterms:title>InstanceType doubtful pro parte misapplied</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>doubtful pro parte misapplied</b>)</dcterms:description>
+        <nsl:id>doubtful-pro-parte-misapplied</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>90</boa:sortOrder>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-citing'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-doubtful'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-misapplied'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-pro-parte'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-relationship'/>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/boa/relationship#doubtful-pro-parte-misapplied'/>
+
+    </boa:InstanceType>
+
+    <boa:InstanceType rdf:about="http://biodiversity.org.au/voc/boa/InstanceTypeTerm#unsourced-doubtful-misapplied">
+        <rdfs:label>unsourced doubtful misapplied</rdfs:label>
+        <dcterms:title>InstanceType unsourced doubtful misapplied</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>unsourced doubtful misapplied</b>)</dcterms:description>
+        <nsl:id>unsourced-doubtful-misapplied</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>80</boa:sortOrder>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-citing'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-doubtful'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-misapplied'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-relationship'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-unsourced'/>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/boa/relationship#unsourced-doubtful-misapplied'/>
+
+    </boa:InstanceType>
+
+    <boa:InstanceType rdf:about="http://biodiversity.org.au/voc/boa/InstanceTypeTerm#unsourced-doubtful-pro-parte-misapplied">
+        <rdfs:label>unsourced doubtful pro parte misapplied</rdfs:label>
+        <dcterms:title>InstanceType unsourced doubtful pro parte misapplied</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>unsourced doubtful pro parte misapplied</b>)</dcterms:description>
+        <nsl:id>unsourced-doubtful-pro-parte-misapplied</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>90</boa:sortOrder>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-citing'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-doubtful'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-misapplied'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-pro-parte'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-relationship'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-unsourced'/>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/boa/relationship#unsourced-doubtful-pro-parte-misapplied'/>
+
+    </boa:InstanceType>
+
+    <boa:InstanceType rdf:about="http://biodiversity.org.au/voc/boa/InstanceTypeTerm#alternative-name">
+        <rdfs:label>alternative name</rdfs:label>
+        <dcterms:title>InstanceType alternative name</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>alternative name</b>)</dcterms:description>
+        <nsl:id>alternative-name</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>4</boa:sortOrder>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-citing'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-nomenclatural'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-relationship'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-synonym'/>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/boa/relationship#alternative-name'/>
+
+    </boa:InstanceType>
+
+    <boa:InstanceType rdf:about="http://biodiversity.org.au/voc/boa/InstanceTypeTerm#doubtful-invalid-publication">
+        <rdfs:label>doubtful invalid publication</rdfs:label>
+        <dcterms:title>InstanceType doubtful invalid publication</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>doubtful invalid publication</b>)</dcterms:description>
+        <nsl:id>doubtful-invalid-publication</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>400</boa:sortOrder>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/nsl/NSL#Deprecated'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-doubtful'/>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/boa/relationship#doubtful-invalid-publication'/>
+
+    </boa:InstanceType>
+
+    <boa:InstanceType rdf:about="http://biodiversity.org.au/voc/boa/InstanceTypeTerm#isonym">
+        <rdfs:label>isonym</rdfs:label>
+        <dcterms:title>InstanceType isonym</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>isonym</b>)</dcterms:description>
+        <nsl:id>isonym</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>400</boa:sortOrder>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-citing'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-nomenclatural'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-relationship'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-synonym'/>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/boa/relationship#isonym'/>
+
+    </boa:InstanceType>
+
+    <boa:InstanceType rdf:about="http://biodiversity.org.au/voc/boa/InstanceTypeTerm#orthographic-variant">
+        <rdfs:label>orthographic variant</rdfs:label>
+        <dcterms:title>InstanceType orthographic variant</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>orthographic variant</b>)</dcterms:description>
+        <nsl:id>orthographic-variant</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>5</boa:sortOrder>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-citing'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-nomenclatural'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-relationship'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-synonym'/>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/boa/relationship#orthographic-variant'/>
+
+    </boa:InstanceType>
+
+    <boa:InstanceType rdf:about="http://biodiversity.org.au/voc/boa/InstanceTypeTerm#replaced-synonym">
+        <rdfs:label>replaced synonym</rdfs:label>
+        <dcterms:title>InstanceType replaced synonym</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>replaced synonym</b>)</dcterms:description>
+        <nsl:id>replaced-synonym</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>10</boa:sortOrder>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-citing'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-nomenclatural'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-relationship'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-synonym'/>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/boa/relationship#replaced-synonym'/>
+
+    </boa:InstanceType>
+
+    <boa:InstanceType rdf:about="http://biodiversity.org.au/voc/boa/InstanceTypeTerm#pro-parte-replaced-synonym">
+        <rdfs:label>pro parte replaced synonym</rdfs:label>
+        <dcterms:title>InstanceType pro parte replaced synonym</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>pro parte replaced synonym</b>)</dcterms:description>
+        <nsl:id>pro-parte-replaced-synonym</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>20</boa:sortOrder>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-nomenclatural'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-pro-parte'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-synonym'/>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/boa/relationship#pro-parte-replaced-synonym'/>
+
+    </boa:InstanceType>
+
+    <boa:InstanceType rdf:about="http://biodiversity.org.au/voc/boa/InstanceTypeTerm#trade-name">
+        <rdfs:label>trade name</rdfs:label>
+        <dcterms:title>InstanceType trade name</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>trade name</b>)</dcterms:description>
+        <nsl:id>trade-name</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>400</boa:sortOrder>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-citing'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-relationship'/>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/boa/relationship#trade-name'/>
+
+    </boa:InstanceType>
+
+    <boa:InstanceType rdf:about="http://biodiversity.org.au/voc/boa/InstanceTypeTerm#common-name">
+        <rdfs:label>common name</rdfs:label>
+        <dcterms:title>InstanceType common name</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>common name</b>)</dcterms:description>
+        <nsl:id>common-name</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>400</boa:sortOrder>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-citing'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-relationship'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-unsourced'/>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/boa/relationship#common-name'/>
+
+    </boa:InstanceType>
+
+    <boa:InstanceType rdf:about="http://biodiversity.org.au/voc/boa/InstanceTypeTerm#vernacular-name">
+        <rdfs:label>vernacular name</rdfs:label>
+        <dcterms:title>InstanceType vernacular name</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>vernacular name</b>)</dcterms:description>
+        <nsl:id>vernacular-name</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>400</boa:sortOrder>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-citing'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-relationship'/>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/boa/Instance#Type-unsourced'/>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/boa/relationship#vernacular-name'/>
+
+    </boa:InstanceType>
+
+</rdf:RDF>

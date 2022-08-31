@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE rdf:RDF [
+        <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+        <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+        <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+        <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+        ]>
+
+<rdf:RDF
+        xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+        xmlns:owl="http://www.w3.org/2002/07/owl#"
+        xmlns:dcterms="http://purl.org/dc/terms/"
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+
+        xmlns:boa="http://biodiversity.org.au/voc/boa/BOA#"
+        xmlns:boa_name="http://biodiversity.org.au/voc/boa/Name#"
+        xmlns:boa_name_type="http://biodiversity.org.au/voc/boa/NameType#"
+        xmlns:boa_auth="http://biodiversity.org.au/voc/boa/Author#"
+        xmlns:boa_ref="http://biodiversity.org.au/voc/boa/Reference#"
+        xmlns:boa_rel="http://biodiversity.org.au/voc/boa/relationship#"
+        xmlns:boa_inst="http://biodiversity.org.au/voc/boa/Instance#"
+        xmlns:boa_instNote="http://biodiversity.org.au/voc/nsl/InstanceNote#"
+        xmlns:boa_er="http://biodiversity.org.au/voc/nsl/ExternalReference#"
+        xmlns:nsl="http://biodiversity.org.au/voc/nsl/NSL#"
+        >
+
+    <owl:Ontology rdf:about="http://biodiversity.org.au/voc/nsl/InstanceNoteKeyTerm#ONTOLOGY">
+        <rdfs:isDefinedBy rdf:resource="http://biodiversity.org.au/voc/nsl/InstanceNoteKeyTerm#ONTOLOGY"/>
+        <rdfs:label>InstanceNoteKey terms ontology</rdfs:label>
+        <rdf:seeAlso rdf:resource="http://biodiversity.org.au/voc/nsl/InstanceNoteKey"/>
+        <dcterms:title>InstanceNoteKey terms - List of terms used in BOA</dcterms:title>
+        <dcterms:description rdf:parseType='Literal' rdf:dataType='&rdf;XMLLiteral'>
+            <div xmlns='http://www.w3.org/1999/xhtml' class='description InstanceNoteKey'>
+                <div class="header">InstanceNoteKey terms ontology</div>
+                <div class="content">List of terms appearing in BOA of type InstanceNoteKey</div>
+            </div>
+        </dcterms:description>
+    </owl:Ontology>
+
+    <nsl:InstanceNoteKey rdf:about="http://biodiversity.org.au/voc/nsl/InstanceNoteKeyTerm#etymology">
+        <rdfs:label>Etymology</rdfs:label>
+        <dcterms:title>InstanceNoteKey Etymology</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>Etymology</b>)</dcterms:description>
+        <nsl:id>etymology</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>4</boa:sortOrder>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/nsl/hasInstanceNote#etymology'/>
+
+    </nsl:InstanceNoteKey>
+
+    <nsl:InstanceNoteKey rdf:about="http://biodiversity.org.au/voc/nsl/InstanceNoteKeyTerm#neotype">
+        <rdfs:label>Neotype</rdfs:label>
+        <dcterms:title>InstanceNoteKey Neotype</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>Neotype</b>)</dcterms:description>
+        <nsl:id>neotype</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>3</boa:sortOrder>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/nsl/hasInstanceNote#neotype'/>
+
+    </nsl:InstanceNoteKey>
+
+    <nsl:InstanceNoteKey rdf:about="http://biodiversity.org.au/voc/nsl/InstanceNoteKeyTerm#apc-comment">
+        <rdfs:label>APC Comment</rdfs:label>
+        <dcterms:title>InstanceNoteKey APC Comment</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>APC Comment</b>)</dcterms:description>
+        <nsl:id>apc-comment</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>7</boa:sortOrder>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/nsl/hasInstanceNote#apc-comment'/>
+
+    </nsl:InstanceNoteKey>
+
+    <nsl:InstanceNoteKey rdf:about="http://biodiversity.org.au/voc/nsl/InstanceNoteKeyTerm#lectotype">
+        <rdfs:label>Lectotype</rdfs:label>
+        <dcterms:title>InstanceNoteKey Lectotype</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>Lectotype</b>)</dcterms:description>
+        <nsl:id>lectotype</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>2</boa:sortOrder>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/nsl/hasInstanceNote#lectotype'/>
+
+    </nsl:InstanceNoteKey>
+
+    <nsl:InstanceNoteKey rdf:about="http://biodiversity.org.au/voc/nsl/InstanceNoteKeyTerm#type">
+        <rdfs:label>Type</rdfs:label>
+        <dcterms:title>InstanceNoteKey Type</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>Type</b>)</dcterms:description>
+        <nsl:id>type</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>1</boa:sortOrder>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/nsl/hasInstanceNote#type'/>
+
+    </nsl:InstanceNoteKey>
+
+    <nsl:InstanceNoteKey rdf:about="http://biodiversity.org.au/voc/nsl/InstanceNoteKeyTerm#apc-dist">
+        <rdfs:label>APC Dist.</rdfs:label>
+        <dcterms:title>InstanceNoteKey APC Dist.</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>APC Dist.</b>)</dcterms:description>
+        <nsl:id>apc-dist</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>8</boa:sortOrder>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/nsl/hasInstanceNote#apc-dist'/>
+
+    </nsl:InstanceNoteKey>
+
+    <nsl:InstanceNoteKey rdf:about="http://biodiversity.org.au/voc/nsl/InstanceNoteKeyTerm#text">
+        <rdfs:label>Text</rdfs:label>
+        <dcterms:title>InstanceNoteKey Text</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>Text</b>)</dcterms:description>
+        <nsl:id>text</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>5</boa:sortOrder>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/nsl/hasInstanceNote#text'/>
+
+    </nsl:InstanceNoteKey>
+
+    <nsl:InstanceNoteKey rdf:about="http://biodiversity.org.au/voc/nsl/InstanceNoteKeyTerm#comment">
+        <rdfs:label>Comment</rdfs:label>
+        <dcterms:title>InstanceNoteKey Comment</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>Comment</b>)</dcterms:description>
+        <nsl:id>comment</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>6</boa:sortOrder>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/nsl/hasInstanceNote#comment'/>
+
+    </nsl:InstanceNoteKey>
+
+    <nsl:InstanceNoteKey rdf:about="http://biodiversity.org.au/voc/nsl/InstanceNoteKeyTerm#vernacular">
+        <rdfs:label>Vernacular</rdfs:label>
+        <dcterms:title>InstanceNoteKey Vernacular</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>Vernacular</b>)</dcterms:description>
+        <nsl:id>vernacular</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>12</boa:sortOrder>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/nsl/hasInstanceNote#vernacular'/>
+
+    </nsl:InstanceNoteKey>
+
+    <nsl:InstanceNoteKey rdf:about="http://biodiversity.org.au/voc/nsl/InstanceNoteKeyTerm#synonym">
+        <rdfs:label>Synonym</rdfs:label>
+        <dcterms:title>InstanceNoteKey Synonym</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>Synonym</b>)</dcterms:description>
+        <nsl:id>synonym</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>100</boa:sortOrder>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/nsl/NSL#Deprecated'/>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/nsl/hasInstanceNote#synonym'/>
+
+    </nsl:InstanceNoteKey>
+
+    <nsl:InstanceNoteKey rdf:about="http://biodiversity.org.au/voc/nsl/InstanceNoteKeyTerm#epbc-impact">
+        <rdfs:label>EPBC Impact</rdfs:label>
+        <dcterms:title>InstanceNoteKey EPBC Impact</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>EPBC Impact</b>)</dcterms:description>
+        <nsl:id>epbc-impact</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>10</boa:sortOrder>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/nsl/NSL#Deprecated'/>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/nsl/hasInstanceNote#epbc-impact'/>
+
+    </nsl:InstanceNoteKey>
+
+    <nsl:InstanceNoteKey rdf:about="http://biodiversity.org.au/voc/nsl/InstanceNoteKeyTerm#epbc-advice">
+        <rdfs:label>EPBC Advice</rdfs:label>
+        <dcterms:title>InstanceNoteKey EPBC Advice</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>EPBC Advice</b>)</dcterms:description>
+        <nsl:id>epbc-advice</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>9</boa:sortOrder>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/nsl/NSL#Deprecated'/>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/nsl/hasInstanceNote#epbc-advice'/>
+
+    </nsl:InstanceNoteKey>
+
+    <nsl:InstanceNoteKey rdf:about="http://biodiversity.org.au/voc/nsl/InstanceNoteKeyTerm#reference-note">
+        <rdfs:label>Reference Note</rdfs:label>
+        <dcterms:title>InstanceNoteKey Reference Note</dcterms:title>
+        <dcterms:description rdf:parseType="Literal" xmlns="http://www.w3.org/1999/xhtml">(description of <b>Reference Note</b>)</dcterms:description>
+        <nsl:id>reference-note</nsl:id>
+        <boa:sortOrder rdf:dataType='&xsd;int'>100</boa:sortOrder>
+        <rdf:type rdf:resource='http://biodiversity.org.au/voc/nsl/NSL#Deprecated'/>
+        <rdf:seeAlso rdf:resource='http://biodiversity.org.au/voc/nsl/hasInstanceNote#reference-note'/>
+
+    </nsl:InstanceNoteKey>
+
+</rdf:RDF>
