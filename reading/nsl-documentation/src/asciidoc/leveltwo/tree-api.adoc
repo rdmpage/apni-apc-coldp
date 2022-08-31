@@ -1,0 +1,405 @@
+:imagesdir: resources/images/
+
+=== Tree Structure V1.0
+.Under Construction
+****
+This documentation is under construction. We understand it needs extending and improving, but we thought we'd let you
+see what we've got so far.
+****
+
+Our tree component stores taxonomic trees, and potentially more. It can store arbitrary document-structured data, such
+as profile data, whose elements are identified by RDF classes and predicates.
+
+The tree component holds a full history of every change made to any part of the tree.
+
+The principal design goal is that no persistent footnote:[nodes start in a draft state that permits edits] node of the
+tree should ever change. That is: given a publically available
+node id, the entire document at that node  - the node itself and all nodes below it - should be stable.
+
+The purpose of
+this is to permit node ids to be used as reliable references. Using a node id, an
+author can declare that they are using a particular name in a particular classification at a particular time, and that
+declaration will not change its meaning as our classifications are maintained and updated.
+
+To make this possible, nodes are never changed - they are replaced by new nodes. footnote:[That is: the _content_ does not
+change. The _state_ obviously does, but only in respect of the internal functioning of the tree, not in terms of the node's
+nomenclatural or taxonomic meaning or status.]. This replacement propagates upward
+through the tree, resulting in a new root node whose entire document includes the new node in place of the previous
+one, by way of a series of new nodes along the path from the root to the changed node. In our code, we call this process
+"versioning".
+
+The process is somewhat inspired by Git and other version-management tools. We do not use hashes to identify
+subdocuments, however, just the nodes themselves. We also do not use timestamps to manage or identify versions of a
+node - the structure over time is directly in the nodes and the links between them. footnote:[timestamps are often
+problematic, Common problems involving confusions about timezone and system clocks not properly set.]
+
+Our algorithms permit any number of changes to be made to a tree simultaneously. This permits, for instance, a name to
+be moved from one higher taxon to another as a single operation. Certain bulk updates which have had to be done as
+part of the maintenance of the classification appear as single changes affecting almost all nodes.
+
+Our algorithms permit a node to be used as a subnode of any number of other nodes (provided no cycles are formed). This would permit in future a user to create their own trees that connect together fragments of other trees.
+
+==== Overall Structure
+
+image::Tree-SimplifiedER.png[title="Tree overall structure"]
+
+Our data consists of a number of tree *Nodes*. +
+Nodes are linked into directed acyclic graphs with *Links*. +
+Nodes each belongs to an *Arrangement*. +
+Node lifecycle is recorded in *Events*.
+
+===== Nodes and Links
+
+A node "is" its content and the set of links of which it is the supernode (and therefore the nodes below them). To put it
+another way, links are _part of_ the node above them, a node _has_ the links of which it is the supernode.
+A change to a link is a change to the node above it, not to the node  below it. Nodes, in a sense, do not care where
+they are placed, they include what is placed under them.
+
+Links, therefore, are not separate from nodes and there is not an api to retrieve them separately. A link's identity is
+its supernode and its *linkSeq*. A node's links are guaranteed to have unique *linkSeq* numbers but are not
+guaranteed to have consecutive *linkSeq* numbers. This makes it possible to work out what about a node has changed
+from one version to the next - matching *linkSeq* numbers are "the same" link. If a subnode is deleted from a node,
+what will happen is that a new version of the node will be created with that *linkSeq* missing.
+
+===== Arrangements
+
+We use the term "arrangement" in the sense of "an arrangement of nodes". The
+term "Tree" or "Classification" is used more strictly - it means an arrangement that has a specific higher-order structure.
+Most of the arrangements accessible by the public API are in fact classifications. Other arrangements are used
+internally.
+
+Every node belongs to one Arrangement.
+
+Every arrangement has one 'top' node.
+
+Arrangements are where permissions and authorisation is done. We do not have an access control list on every node - it's
+done at the arrangement layer.
+
+===== Lifecycle
+
+A node has two events in its lifecycle. It changes from being a draft node to being a (current) persistent node, and it
+changes from being a current node to being a replaced node. The *checkedInAt* attribute links to the *Event*
+at which a node is made persistent, and the *replacedAt* attribute links to the *Event* at which a node
+became replaced.
+
+Most *Events* have many nodes checked in and replaced by them. Events have a timestamp, and so a node is current
+from the timestamp of it's *checkedInAt* event up to but not including the timestamp of its *replacedAt* event.
+
+Most of the time, users want to work with the set of current nodes in an arrangement, and our system is optimised
+towards that. From the point of view of our editors, the set of current nodes "is" the tree.
+
+===== History
+
+Corresponding to the lifecycle event attributes, a node also has a *prev* and *next* attribute
+(which we inconsistently call its *copyOf* and *replacedBy* node in some places). Nodes and links also
+have a boolean *synthetic* attribute.
+
+Most of the time, nodes are updated because the nodes beneath them have been updated - a change has been rippled "up
+the tree" by the versioning algorithm. In these cases, the *next* and *prev* attributes will form a
+doubly-linked list and the node and its links will be marked 'synthetic'.
+
+Cases where this is not true usually indicates a user edit - that something interesting has happened. A newly created
+node has no 'prev'. If a node is used in a different tree, and then in that different tree edits are performed, then
+the new node will have a 'prev' of the node from which it was copied, but the node from which it was copies will not
+indicate that the new node is its 'next'. Many cases are possible, and graphically showing them to a user in a
+meaningful and useful way … is something that would be very nice to have.
+
+And so to find points in a node's history where the node itself has been edited for some reason, search for nodes whose
+ *synthetic* attribute is `false`.
+
+A node has a *next* node if and only if it has a *replacedAt* event. We therefore have a special *End Node* whose
+id is 0 and whose RDF identifier is a constant belonging to the BOA RDF vocabulary footnote:[http://www.biodiversity.org.au/voc/boa/Tree#END-NODE]. This node has to belong to an
+arrangement, and so arrangement 0 is the  *End Tree* consisting only of that single node, also having a constant id
+that is part of the BOA vocabulary footnote:[http://www.biodiversity.org.au/voc/boa/Tree#END-TREE]. From the point of view of the semantic web, the end node and end tree are each the
+same semantic-web "thing" wherever they appear.
+
+The primary reason for this is internal - it is so that SQL queries that look at node histories and changes don't have
+to outer join on `node.next_node_id`.
+
+==== Arrangement, Node, and Link internal types
+
+Certain attributes of Arrangements, Nodes, and Links alter how they are treated internally by the system at the
+lower level of processing. That is, they do not have taxonomic meaning. These types are separate from the RDF types,
+which are discussed in <<Node and Link RDF types>>.
+
+===== Arrangement types
+
+An arrangement may be
+
+*E*: The End Tree:: There is only ever one end tree, and it has an id of 0. Discussed in <<History>>
+*P*: Public classification:: This is the most usual type that a user of our API will deal with. Classification trees have
+a specific higher-level structure discussed in <<Classification trees>>.
+*U*: User:: User trees will be made up of fragments of other trees.
+*B*: Bookmark:: These will consist of one (or perhaps several) nodes that "track" nodes in
+other arrangements.
+*Z*: System temporary:: These are used internally to perform certain operations and discarded.
+
+===== Node types
+
+A node may be
+
+*S*: System node:: These are nodes which are used internally by the system, but which do not have
+scientific or taxonomic meaning.
+*T*: Taxonomic node:: This node will be associated with a name, and usually with an instance.
+*D*: Document node:: These nodes will be collections of value nodes and other document nodes.
+*Z*: Temp node:: These are nodes used internally to perform certain operations and discarded.
+*V*: Value node:: A value node either has a literal value or is a semantic web URI. +
+Value nodes never change, are never replaced, and never have subnodes footnote:[It doesn't make sense to say that 1
+has changed into 2. It only makes sense to say that something has a property that has changed from 1 to 2.
+That is: you are talking about the link, which belongs to the supernode, not about the value node itself.].
+Value nodes are always attached to supernodes with fixed links. In RDF, value nodes do not appear as nodes in their own
+right with an identifying URI; they are instead rendered as properties on the Document or Taxonomic node to which they
+are attached.
+
+A node may also be synthetic (or not). This is discussed in <<History>>.
+
+===== Link types
+
+A link has a *versioningMethod*. This may be
+
+*V*: Versioning:: If the subnode of the link is replaced with a new version, then the supernode must be replaced
+with a new version. +
+This is the usual case. Versioning links are how the normal "changes must be rippled up" operation of the system
+works. *If the supernode of a versioning link is a current node, then the subnode will also be current.*
+*F*: Fixed:: If the subnode of the link is replaced with a new version, then do not ripple the change up. +
+Value nodes are always attached to ther supernodes with fixed links. Aside from this, we do not use fixed links at
+present, although they may be an option in user-created arrangements. If an arrangement
+uses fixed links, then it is not possible to identify nodes currently attached to the root of the tree without
+doing a treewalk.
+*T*: Tracking:: If the subnode of the link is replaced with a new version, then update the link to refer to the new
+version without making a new version of the supernode. +
+*The subnode of a tracking link is always a _current_ node*. This even applies to replaced (old) nodes. The tracking
+links of replaced nodes are not frozen in time
+because "where the tracking link happened to be at the time this node was replaced" doesn't mean anything that could
+not be meant by using a versioning link.
+
+We use tracking links to provide a persistent handles to nodes that change over time, to provide a persistent name for
+whatever the current version of some other node might be. They do not form part of taxonomic trees footnote:[It might be
+reasonable for profile data to be linked to with tracking links, depending on how it is managed. Such a link would be more of
+an FYI inclusion - it would mean that the content of the document does not form part of the identity of the taxon].
+See <<Classification trees>> for the most important use of
+this currently.
+
+==== Node content and Node and Link RDF types
+
+Nodes and links have attributes that carry data. These attributes are not of interest to the low-level maintenance
+of the tree structure, but they are of interest to whatever it is that is using the tree to store data.
+
+Firsly, and most obviously, T type nodes usually hold a name and instance id. In NSL, we have a 'Name Tree' whose
+main job is to provide Phylum and Family for generic and subgeneric names so that suitable output can be produced.
+We also have an 'APC' classification whose job is to hold accepted names and taxa for the Australian Plant Census.
+
+Parallel with the name and instance ids, we also have name and taxon URIs. Name and taxon URIs match the name and instance
+ids when these ids refer to names held in the local shard. However, having URIs permit us to create branches that
+terminate at names and taxa that are foreign ids.
+
+Along with name and taxon URIs, we also have a 'Resource' URI. This is mainly intended for V (value) type nodes. In
+RDF, a value may be a types primitive, or is may be a "resource" - a URI.
+
+Nodes and links also have a Type URI. In RDF, the link type becomes the RDF predicate, and the node type becomes the
+type of a typed primitive (where the node is a value), or is used as the OWL class of the node.
+
+The uri type may have meaning within the tree. In particular, our APC tree has nodes of type `APCConcept`, `APCExcluded`,
+and `DeclaredBT`. Their meanings are described in <<apc>>.
+
+Physically, our URIs are broken into a
+namespace and a an id. These are named `‹Name|Taxon|Resource›UriNsPart` and `‹Name|Taxon|Resource›UriIdPart`. The
+original purpose for splitting the URIs in this way was to make it easier to generate RDF. However, now we use D2R
+to generate the RDF, which does not use this feature to label the URI prefixes, and this design may be unnecessary.
+
+Uri namespace 0 is always the 'empty' namespace. A namespace of 0 means that the entire URI is in the 'UriIdPart'. The
+purpose of this is so that in SQL you don't need to outer join the namespace table.
+
+Uri namespace 1 is always the boatree namespace `http://biodiversity.org.au/voc/boa/Tree#'. This namespace is the prefix
+for internal artifacts when they are exposed as RDF.
+
+==== Classification trees
+
+Classification trees are trees that have a specific higher-order structure, a specific way of using the lower-level
+data structure and algorithms.
+
+The Arrangement of a classification tree has type `P` - public classification. The arrangement always has a label, and
+that label becomes the suffix of the persistent URI identifying the classification.
+
+The top node of the arrangement is a system node `S`. This node has RDF type `classification-node` and holds *one*
+tracking link to a taxonomic node `T` of RDF type 'classification-root'.
+
+The classification root is not part of the taxonomy, does not have a name or an instance, and it may have been a
+mistake to make it a taxonomic node rather than a system node. We have an unnamed root node because
+
+* having a single taxon at the top level would make it impossible to change the name at the top of the taxonomy while
+  recording the history correctly. If our taxonomists were to decide to "push down" the top name, the only way to do it
+  would be to change the name of the top node and add a new node under it with the previous name. The versioning history
+  would not reflect what actually happened - it would not show that the top node got pushed down and that the new top
+  node is new. Instead it would show that the 'Plantae' APC taxon had its name changed to 'Eukaryota' (or whatever).
+  This would simply be wrong - the Plantae concept would not have changed, it would just have been moved.
+* some taxonomies have multiple taxa at the top level that are not organised into a higher classification. For instance,
+  AFD has 'Animalia' and 'Prototheria' at the top level. It would - again - simply be wrong to insist on a top level
+  taxon of Eukaryota or "All life on Earth", because these names are _not part of the Australian Faunal Directory_.
+
+The effect of this is that changes in classification trees result in a new `classification-root` node, and those
+nodes form a single line of history that can be navigated by looking at their `next`/`prev` attributes and the timestamps
+on their associated `Events`. The single `classification-node` acts as a bookmark - its single sublink always points
+to the current (most recent) classification root.
+
+There are a couple more rules:
+
+A classification only ever has one current node for any given name. That is - names appear only once. Consequently,
+our API for classification is is built entirely around names: "add this name to that name as an excluded name" and
+so on.
+
+Every node in a classification arrangement belongs to that arrangement. The purpose of this is to expedite the most
+important and common operation: find a name's current placement in a classification.
+
+*IF* a node
+
+* has the name you are looking for; AND
+* belongs to the classification you are searching; AND
+* is current
+
+*THEN*
+
+* it is the current placement of that name in that classification
+* it will have *one* superlink that links it to a node that
+** also belongs to the classification; AND
+** is current
+
+Both of these conditions need to be checked. Nodes may be included as subnodes in user classifications, and nodes
+will be placed under multiple copies of a supernode when sibling nodes are updated. However, only one will be current.
+
+And remember - this only applies to Arrangements of type `P`, which are maintained in such a way as these rules are 
+followed.
+
+
+=== Tree API for JSON V1.0
+
+The tree JSON API is built to work with AngularJS and similar platforms.
+
+This API comprises three main components:
+* the tree view services; and
+* JSON views of nodes, arrangements, and events;
+* the tree edit services, which require a user login
+
+** TODO: put in correct URLs for these services **
+
+==== tree view services
+
+===== listNamespaces
+
+**GET (no parameters)** to list the known namespaces.
+
+[source]
+----
+http://[your uri]/TreeJsonView/listNamespaces
+----
+
+.Returns
+
+ * A JSON array of information about namespaces
+
+.Example 1
+
+curl --noproxy \* -L -H "Accept: application/json" -X GET 'http://localhost:8080/services/TreeJsonView/listNamespaces'
+
+.Response
+
+[source, javascript]
+----
+[
+  {
+    "class":"au.org.biodiversity.nsl.Namespace",
+    "name":"AMANI",
+    "descriptionHtml":"<b>AMANI<\u002fb>: Australian Marine Algal Names Index"
+  },
+  {
+    "class":"au.org.biodiversity.nsl.Namespace",
+    "name":"AUSMOSS",
+    "descriptionHtml":"<b>AUSMOSS<\u002fb>: Australian Mosses"
+  },
+  {
+    "class":"au.org.biodiversity.nsl.Namespace",
+    "name":"APNI",
+    "descriptionHtml":"<b>APNI<\u002fb>: Australian Plant Names Index"
+  }
+]
+----
+
+===== listClassifications
+
+**GET namespace** to list the classifications in a namespace
+
+[source]
+----
+http://[your uri]/TreeJsonView/listClassifications?namespace=APNI
+----
+
+.Parameters
+
+namespace: the name of a namespace
+
+.Returns
+
+ * A JSON array of the URIs of classifications in the namespace
+
+.Example 1
+
+curl --noproxy \* -L -H "Accept: application/json" -X GET 'http://localhost:8080/services/TreeJsonView/listClassifications?namespace=APNI'
+
+.Response
+
+[source, javascript]
+----
+[
+  "http://localhost:7070/nsl-mapper/boa/tree/apni/1133571",
+  "http://localhost:7070/nsl-mapper/boa/tree/apni/3029293",
+  "http://localhost:7070/nsl-mapper/boa/tree/apni/4950638",
+  "http://localhost:7070/nsl-mapper/boa/tree/apni/1019"
+]
+----
+
+
+===== listWorkspaces
+
+**GET namespace** to list the workspaces in a namespace
+
+[source]
+----
+http://[your uri]/TreeJsonView/listWorkspaces?namespace=APNI
+----
+
+.Parameters
+
+namespace: the name of a namespace
+
+.Returns
+
+ * A JSON array of the URIs of workspaces in the namespace
+
+.Example 1
+
+curl --noproxy \* -L -H "Accept: application/json" -X GET 'http://localhost:8080/services/TreeJsonView/listWorkspaces?namespace=APNI'
+
+.Response
+
+[source, javascript]
+----
+[
+  "http://localhost:7070/nsl-mapper/boa/tree/apni/4952854",
+  "http://localhost:7070/nsl-mapper/boa/tree/apni/4952889"
+]
+----
+
+===== permissions
+
+
+==== JSON views of nodes, arrangements, and events
+
+
+==== Tree Edit Services
+
+===== createWorkspace
+
+===== deleteWorkspace
+
+===== updateWorkspace
+

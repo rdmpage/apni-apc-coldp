@@ -1,0 +1,54 @@
+buildscript {
+    repositories {
+//        mavenRepo name: 'Bintray Asciidoctor repo', url: 'http://dl.bintray.com/content/aalmiray/asciidoctor'
+//        mavenRepo name: 'Bintray JCenter', url: 'http://jcenter.bintray.com'
+        jcenter()
+    }
+
+    dependencies {
+        classpath "org.asciidoctor:asciidoctor-gradle-plugin:1.5.3"
+        classpath 'org.asciidoctor:asciidoctorj-pdf:1.5.0-alpha.15'
+    }
+}
+
+apply plugin: 'org.asciidoctor.gradle.asciidoctor'
+apply plugin: 'org.asciidoctor.convert'
+
+//plugins {
+//    id 'org.asciidoctor.convert' version '1.5.3'
+//}
+
+
+asciidoctorj {
+    version = '1.5.5'
+}
+
+asciidoctor {
+    backends 'pdf', 'html5'
+    sourceDir = new File('src/asciidoc/toplevel')
+    outputDir = new File("$buildDir/docs")
+    separateOutputDirs = true
+    options = [
+            eruby     : 'erubis',
+    ]
+    attributes(
+            'source-highlighter': 'prettify',
+            toc: '',
+            idprefix: '',
+            idseparator: '-',
+            docinfo1: ''
+    )
+
+    sources {
+        include 'main.adoc'
+        include 'setup.adoc'
+        include 'NamesOfThings.adoc'
+    }
+
+    resources {
+        from('src/asciidoc/toplevel/resources')
+        from('src/asciidoc/leveltwo/resources')
+        into "./resources"
+    }
+
+}
