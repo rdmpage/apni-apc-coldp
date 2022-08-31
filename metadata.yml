@@ -1,0 +1,30 @@
+#doi: 
+title:  Australian Plant Name Index and Census
+alias: APNI-APC
+description: "The Australian Plant Name Index (APNI) and the Australian Plant Census (APC) together provide nomenclature (APNI) and taxonomic (APC) data for Australian vascular plants. The data is avalable under a CC-BY 3.0 license. This version is based on CSV files downloaded 2022-08-30, together with data on references downloaded using the National Species List (NSL) API. The goal is to associate each bibliographic reference with a persistent identifier, such as a DOI."
+released: 2022-08-31
+version: 2022-08-31
+contact:
+  - given: Roderic
+    family: Page
+    city: Glasgow
+    country: United Kingdom
+    orcid: 0000-0002-7101-9767
+    email: Roderic.Page@glasgow.ac.uk
+    organisation: University of Glasgow
+    rorid: https://ror.org/00vtgdb53
+
+geographicScope: Australia
+taxonomicScope: Plants
+#temporalScope: 
+confidence: 3
+completeness: 99
+license: CC-BY
+source:
+
+  - id: https://biodiversity.org.au/nsl/
+    type: dataset
+    title: The Australian National Species List
+    issued: 2022
+    version: 30 August 2022 
+    url: https://biodiversity.org.au/nsl/
