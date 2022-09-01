@@ -1,7 +1,7 @@
 doi: 10.5281/zenodo.7038730
-title:  Australian Plant Name Index and Census
-alias: APNI-APC
-description: "The Australian Plant Name Index (APNI) and the Australian Plant Census (APC) together provide nomenclature (APNI) and taxonomic (APC) data for Australian vascular plants. The data is avalable under a CC-BY 3.0 license. This version is based on CSV files downloaded 2022-08-30, together with data on references downloaded using the National Species List (NSL) API. The goal is to associate each bibliographic reference with a persistent identifier, such as a DOI."
+title:  Australian Plant Name Index and Census Trial
+alias: APNI-APC Trial
+description: "A trial copy of the Australian Plant Name Index (APNI) and the Australian Plant Census (APC) together provide nomenclature (APNI) and taxonomic (APC) data for Australian vascular plants. The data is avalable under a CC-BY 3.0 license. This version is based on CSV files downloaded 2022-08-30, together with data on references downloaded using the National Species List (NSL) API. The goal is to associate each bibliographic reference with a persistent identifier, such as a DOI."
 released: 2022-08-31
 version: 2022-08-31
 contact:
