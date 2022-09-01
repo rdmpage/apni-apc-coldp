@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>baseURL</key>
-	<string>https://biodiversity.org.au/nsl/services/rest/reference/apni/40312.json</string>
+	<string>https://biodiversity.org.au/nsl/services/rest/reference/apni/51424064.json</string>
 	<key>followRedirect</key>
 	<true/>
 	<key>handleJSONPCallbacks</key>
